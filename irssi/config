@@ -296,7 +296,7 @@ settings = {
     server_connect_timeout = "2min";
   };
   "fe-common/core" = {
-    theme = "gapz";
+    theme = "vt100";
     show_names_on_join = "no";
     print_active_channel = "yes";
     use_status_window = "yes";

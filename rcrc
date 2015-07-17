@@ -1,0 +1,6 @@
+################################################################################
+## ~/.rcrc
+
+COPY_ALWAYS="*"
+DOTFILES_DIRS="/home/f6k/g/dotfiles"
+EXCLUDES="README.md"

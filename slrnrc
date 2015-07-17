@@ -1,0 +1,37 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ~/.slrnrc
+%% http://michael-prokop.at/computer/config/.slrnrc for more!
+
+set username "f6k"
+set realname "FGK"
+set hostname "opmbx.org"
+set organization "aliud legem discipulus"
+
+set sorting_method 11
+set overview_date_format "%m/%d %H:%M" % for the %D of header_display_format
+header_display_format 0 "%F%B% [%5D %12r]%t%s"
+set generate_date_header 1
+visible_headers "From:,Newsgroups:,Subject:,Date:,Followup-To:"
+
+set followup_strip_signature 0 % don't include sig in quoted text of followups
+
+set editor_command "emacsclient -c '%s' -a zile"
+set mail_editor_command "mutt -H '%s'"
+set abort_unmodified_edits 1 % abord if nothing was modified in post/mail
+set non_Xbrowser "lynx '%s'"
+
+% nnrpaccess "news.isp.tld" "username" "password"
+include ".slrnrc-private"
+
+%% ┬┌ ┬─┐┐ ┬┬─┐o┌┐┐┬─┐o┌┐┐┌─┐┐─┐
+%% ├┴┐├─ └┌┘│─││││││ ││││││ ┬└─┐
+%% │ ┘┴─┘ │ ┴─┘│ └┘┴─┘│ └┘└─┘──┘
+%%% KEYBINDINGS
+
+setkey group line_down "j"
+setkey group line_up "k"
+setkey article next "j"  % next unread article
+setkey article previous "k"  % previous unread article
+setkey article skip_to_next_group "J"  % go to the next group
+setkey article skip_to_previous_group "K"  % go to the previous group
+setkey article delete_thread "^r" % mark (sub-)thread as read

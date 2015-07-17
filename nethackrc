@@ -1,0 +1,52 @@
+################################################################################
+## ~/.nethackrc
+
+## ┌─┐┬ ┬┬─┐┬─┐┬─┐┌─┐┌┐┐┬─┐┬─┐
+## │  │─┤│─┤│┬┘│─┤│   │ ├─ │┬┘
+## └─┘│ ┴┘ ││└┘┘ │└─┘ │ ┴─┘│└┘
+#################### CHARACTER
+
+OPTIONS=role:val,race:dwa
+OPTIONS=pettype:cat,hilite_pet,lit_corridor,color,DECgraphics,boulder:0
+OPTIONS=msg_window:reversed
+OPTIONS=showexp,showscore,time,!autopickup
+OPTIONS=fruit:unspeakably generic fruit
+OPTIONS=tombstone,checkpoint,disclose: +i +a +v +g +c
+OPTIONS=runmode:run,scores:10 top/2 around/own
+OPTIONS=autoquiver,suppress_alert:0.3.0
+OPTIONS=number_pad:0
+
+## ┌┐┐┬─┐┌┌┐┬─┐┐─┐
+## ││││─┤│││├─ └─┐
+##  └┘┘ │┘ │┴─┘──┘
+############ NAMES
+
+OPTIONS=catname:Salem,dogname:Toubeau
+
+## ┌┌┐┬─┐┌┐┐┬ ┐┌─┐┌─┐┬  ┌─┐┬─┐
+## │││├─ ││││ ││  │ ││  │ ││┬┘
+## ┘ │┴─┘ └┘└─┘└─┘┘─┘└─┘┘─┘│└┘
+#################### MENUCOLOR
+
+# For colored terminal
+# lightcyan - good food
+# orange - cursed (or under +0)
+# yellow - not cursed
+# lightgreen - blessed
+#MENUCOLOR="safe"=yellow
+#MENUCOLOR="[0-9]:[0-9]"=yellow
+#MENUCOLOR="\+[0-9]"=yellow
+#MENUCOLOR="[Cc]ursed"=orange
+#MENUCOLOR="[Uu]ncursed"=yellow
+#MENUCOLOR="[Bb]lessed"=lightgreen
+#MENUCOLOR="-[0-9]"=orange
+
+# For monochromed terminal
+#MENUCOLOR="safe"=underline
+#MENUCOLOR="[0-9]:[0-9]"=underline
+#MENUCOLOR="\+[0-9]"=underline
+#MENUCOLOR="[Cc]ursed"=blink
+#MENUCOLOR="[Uu]ncursed"=underline
+#MENUCOLOR="[Bb]lessed"=inverse
+#MENUCOLOR="-[0-9]"=blink
+

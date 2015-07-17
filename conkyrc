@@ -1,0 +1,68 @@
+################################################################################
+## ~/.conkyrc
+
+## ┌─┐┬─┐┌┐┐┬─┐┬─┐┬─┐┬  
+## │ ┬├─ │││├─ │┬┘│─┤│  
+## └─┘┴─┘ └┘┴─┘│└┘┘ │└─┘
+################ GENERAL
+
+background yes
+out_to_console no
+out_to_x yes
+update_interval 1
+update_interval_on_battery 2
+total_run_times 0
+use_spacer none
+uppercase false
+alignment bottom_right
+double_buffer yes
+
+## ┬─┐┌─┐┐─┐o┌┐┐o┌─┐┌┐┐
+## │─┘│ │└─┐│ │ ││ ││││
+## │  ┘─┘──┘│ │ │┘─┘ └┘
+############## POSITION
+
+gap_x 0
+gap_y -10
+
+## ┬─┐┌─┐┌┐┐┌┐┐
+## ├─ │ ││││ │ 
+## │  ┘─┘ └┘ │ 
+########## FONT
+
+use_xft yes
+xftfont Keep Calm Medium-10:style=bold
+
+## ┐ ┬o┌┐┐┬─┐┌─┐┐ ┬
+## ││││││││ ││ ││││
+## └┴┘│ └┘┴─┘┘─┘└┴┘
+############ WINDOW
+
+own_window no
+own_window_type normal
+own_window_hints undecorated
+border_inner_margin 0
+border_outer_margin 0
+border_width 0
+default_color #fcefba
+default_outline_color black
+own_window_colour black
+draw_outline no
+draw_shades no
+draw_graph_borders no
+draw_borders no
+border_inner_margin 7
+border_outer_margin 0
+border_width 0
+
+## ┌┐┐┬─┐┐ │┌┐┐
+##  │ ├─ ┌┼┘ │ 
+##  │ ┴─┘│ └ │ 
+########## TEXT
+
+TEXT
+${color #fcefba}${font Keep Calm Medium:size=33:style=bold}${alignr}${time %I:%M%p}$font
+${font DejaVu Sans Mono-9}${alignr 3}${voffset 0}${tztime America/Mexico_City %I:%M%p %Z %a (Acapulco, Guerrero, México)}${font}
+${font DejaVu Sans Mono-9}${alignr 3}${ibm_temps 0}/${ibm_temps 3}:${ibm_fan} ${color lightgray}¤${color} ${battery_short} ${color lightgray}¤${color} ${loadavg 1}:${cpu}% ${color lightgray}¤${color} ${ibm_brightness}:${ibm_volume} ${color lightgray}¤${color} ${time %u·%d%m%y·%j}
+${voffset -7}${stippled_hr}
+${alignr 3}${voffset -3}${if_up atm0}${addr atm0} ${color lightgray}¤${color} ${upspeed atm0}/${downspeed atm0} ${else}${if_up eth0}${addr eth0} ${color lightgray}¤${color} ${upspeed eth0}/${downspeed eth0} ${else}${if_up wlan0}${wireless_essid wlan0}:${addr wlan0}:${wireless_link_qual wlan0}/${wireless_link_qual_max wlan0}:${wireless_link_qual_perc wlan0}% ${color lightgray}¤${color} ${upspeed wlan0}/${downspeed wlan0} ${color lightgray}¤${color} M:${texeci 300 ~/e/mailnot.py}${else}You are not connected to any network${endif}${font}

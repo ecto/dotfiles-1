@@ -1,0 +1,384 @@
+################################################################################
+## ~/.irssi/config
+
+## ┐─┐┬─┐┬─┐┐ ┬┬─┐┬─┐┐─┐
+## └─┐├─ │┬┘│┌┘├─ │┬┘└─┐
+## ──┘┴─┘│└┘└┘ ┴─┘│└┘──┘
+################ SERVERS
+
+servers = (
+  {
+    address = "irc.freenode.net";
+    chatnet = "freenode";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+  },
+  {
+    address = "chat.facebook.com";
+    port = "5222";
+    use_ssl = "no";
+    chatnet = "facebook";
+    autoconnect = "no";
+  }
+);
+
+## ┌─┐┬ ┬┬─┐┌┐┐┌┐┐┬─┐┌┐┐┐─┐
+## │  │─┤│─┤ │ │││├─  │ └─┐
+## └─┘│ ┴┘ │ │  └┘┴─┘ │ ──┘
+################## CHATNETS
+
+chatnets = {
+  IRCnet = {
+    type = "IRC";
+    max_kicks = "4";
+    max_msgs = "5";
+    max_whois = "4";
+    max_query_chans = "5";
+  };
+  EFNet = { 
+    type = "IRC";
+    max_kicks = "4";
+    max_msgs = "3";
+    max_whois = "1";
+  };
+  Undernet = {
+    type = "IRC";
+    max_kicks = "1";
+    max_msgs = "3";
+    max_whois = "30";
+  };
+  DALnet = {
+    type = "IRC";
+    max_kicks = "4";
+    max_msgs = "3";
+    max_whois = "30";
+  };
+  QuakeNet = {
+    type = "IRC";
+    max_kicks = "1";
+    max_msgs = "3";
+    max_whois = "30";
+  };
+  facebook = { type = "XMPP"; };
+  SILC = { type = "SILC"; };
+  Ubuntu = { type = "IRC"; };
+  freenode = { type = "IRC"; };
+};
+
+## ┌─┐┬ ┬┬─┐┌┐┐┌┐┐┬─┐┬  ┐─┐
+## │  │─┤│─┤││││││├─ │  └─┐
+## └─┘│ ┴┘ │ └┘ └┘┴─┘└─┘──┘
+################## CHANNELS
+
+channels = (
+  { name = "#slackware"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#emacs"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#NetHack"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#laquadrature"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#ubuntu-fr"; chatnet = "freenode"; autojoin = "Yes"; }
+);
+
+## ┬─┐┬  o┬─┐┐─┐┬─┐┐─┐
+## │─┤│  ││─┤└─┐├─ └─┐
+## ┘ │└─┘│┘ │──┘┴─┘──┘
+############## ALIASES
+
+aliases = {
+  J = "join";
+  WJOIN = "join -window";
+  WQUERY = "query -window";
+  LEAVE = "part";
+  BYE = "quit";
+  EXIT = "quit";
+  SIGNOFF = "quit";
+  DESCRIBE = "action";
+  DATE = "time";
+  HOST = "userhost";
+  LAST = "lastlog";
+  SAY = "msg *";
+  WII = "whois $0 $0";
+  WW = "whowas";
+  W = "who";
+  N = "names";
+  M = "msg";
+  T = "topic";
+  C = "clear";
+  CL = "clear";
+  K = "kick";
+  KB = "kickban";
+  KN = "knockout";
+  BANS = "ban";
+  B = "ban";
+  MUB = "unban *";
+  UB = "unban";
+  IG = "ignore";
+  UNIG = "unignore";
+  SB = "scrollback";
+  UMODE = "mode $N";
+  WC = "window close";
+  WN = "window new hide";
+  SV = "say Irssi $J ($V) - http://irssi.org/";
+  GOTO = "sb goto";
+  CHAT = "dcc chat";
+  RUN = "SCRIPT LOAD";
+  UPTIME = "eval exec - expr `date +%s` - \\$F | awk '{print \"Irssi uptime: \"int(\\\\\\$1/3600/24)\"d \"int(\\\\\\$1/3600%24)\"h \"int(\\\\\\$1/60%60)\"m \"int(\\\\\\$1%60)\"s\" }'";
+  CALC = "exec - if which bc &>/dev/null\\; then echo '$*' | bc | awk '{print \"$*=\"$$1}'\\; else echo bc was not found\\; fi";
+  SBAR = "STATUSBAR";
+  INVITELIST = "mode $C +I";
+  Q = "QUERY";
+  "MANUAL-WINDOWS" = "set use_status_window off;set autocreate_windows off;set autocreate_query_level none;set autoclose_windows off;set reuse_unused_windows on;save";
+  EXEMPTLIST = "mode $C +e";
+  ATAG = "WINDOW SERVER";
+  l = "part";
+  cs = "msg chanserv";
+  asay = "foreach channel ${k}msg * $-";
+  ope = "cs op $C $N";
+  rm = "quote remove $C $0 $-";
+  wi = "window";
+  britney = "exec - echo \"$0-\" > ~/q/irc.freenode.net/$C/in";
+  cours = "exec - sed -e \"$0,$1!d\\;/^\\$/d\" ~/b/1.txt > ~/q/irc.freenode.net/$C/in";
+  afk = "away AFK";
+  ubkick = ":msg uBOTu-fr !ch kick $C";
+  ubkban = ":msg uBOTu-fr !ch kban $C";
+  ubfpart = ":msg uBOTu-fr !ch fpart $C";
+  ubunban = ":msg uBOTu-fr !ch unban $C";
+  ubquiet = ":msg uBOTu-fr !ch quiet $C";
+  ubunquiet = ":msg uBOTu-fr !ch unquiet $C";
+  fpart = "quote remove $C";
+};
+
+## ┐─┐┌┐┐┬─┐┌┐┐┬ ┐┐─┐┬─┐┬─┐┬─┐
+## └─┐ │ │─┤ │ │ │└─┐│─││─┤│┬┘
+## ──┘ │ ┘ │ │ └─┘──┘┴─┘┘ ││└┘
+#################### STATUSBAR
+
+statusbar = {
+  # formats:
+  # when using {templates}, the template is shown only if it's argument isn't
+  # empty unless no argument is given. for example {sb} is printed always,
+  # but {sb $T} is printed only if $T isn't empty.
+
+  items = {
+    # start/end text in statusbars
+    barstart = "{sbstart}";
+    barend = "{sbend}";
+
+    topicbarstart = "{topicsbstart}";
+    topicbarend = "{topicsbend}";
+
+    # treated "normally", you could change the time/user name to whatever
+    time = "{sb $Z}";
+    user = "{sb {sbnickmode $cumode}$N{sbmode $usermode}{sbaway $A}}";
+
+    # treated specially .. window is printed with non-empty windows,
+    # window_empty is printed with empty windows
+    window = "{sb $winref:$itemname{sbmode $M}}";
+    window_empty = "{sb $winref{sbservertag $tag}}";
+    prompt = "{prompt $[.15]itemname}";
+    prompt_empty = "{prompt $winname}";
+    topic = " $topic";
+    topic_empty = " Irssi v$J - http://irssi.org/help/";
+
+    # all of these treated specially, they're only displayed when needed
+    lag = "{sb l:$0-}";
+    act = "{sb a:$0-}";
+    more = "-- more --";
+  };
+
+  # there's two type of statusbars. root statusbars are either at the top
+  # of the screen or at the bottom of the screen. window statusbars are at
+  # the top/bottom of each split window in screen.
+  default = {
+    # the "default statusbar" to be displayed at the bottom of the window.
+    # contains all the normal items.
+    window = {
+
+      # window, root
+      type = "window";
+      # top, bottom
+      placement = "bottom";
+      # number
+      position = "1";
+      # active, inactive, always
+      visible = "inactive";
+
+      # list of items in statusbar in the display order
+      items = {
+        barstart = { priority = "100"; };
+        user = { };
+        window = { };
+        window_empty = { };
+        lag = { priority = "-1"; };
+        usercount = { };
+        act = { priority = "10"; };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+        itime = { };
+      };
+      disabled = "yes";
+    };
+
+    # statusbar to use in inactive split windows
+    window_inact = {
+      type = "window";
+      placement = "bottom";
+      position = "1";
+      visible = "active";
+      items = {
+        barstart = { priority = "100"; };
+        window = { };
+        window_empty = { };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+      disabled = "yes";
+    };
+
+    # we treat input line as yet another statusbar :) It's possible to
+    # add other items before or after the input line item.
+    prompt = {
+      type = "root";
+      placement = "bottom";
+      # we want to be at the bottom always
+      position = "100";
+      visible = "always";
+      items = {
+        lag = { priority = "-1"; };
+        act = { priority = "-1"; };
+        away = { priority = "0"; };
+        window = { };
+        window_empty = { };
+        xmpp_composing = { };
+        prompt = { priority = "-1"; };
+        prompt_empty = { priority = "-1"; };
+        # treated specially, this is the real input line.
+        input = { priority = "10"; };
+      };
+    };
+
+    # topicbar
+    topic = {
+      type = "root";
+      placement = "top";
+      position = "1";
+      visible = "always";
+      items = {
+        topicbarstart = { priority = "100"; };
+        topic = { };
+        topic_empty = { };
+        topicbarend = { priority = "100"; alignment = "right"; };
+      };
+      disabled = "yes";
+    };
+    add = { disabled = "yes"; };
+    enable = { disabled = "yes"; };
+    remove = { disabled = "yes"; };
+    disable = { disabled = "yes"; };
+  };
+};
+
+## ┐─┐┬─┐┌┐┐┌┐┐o┌┐┐┌─┐┐─┐
+## └─┐├─  │  │ │││││ ┬└─┐
+## ──┘┴─┘ │  │ │ └┘└─┘──┘
+################ SETTINGS
+
+settings = {
+  core = {
+    real_name = "f6k";
+    user_name = "f6k";
+    nick = "f6k";
+    cmdchars = ":";
+    timestamp_format = "%m%d%H%M";
+    recode_out_default_charset = "utf-8";
+    log_timestamp = "%m%d%H%M";
+    awaylog_file = "~/.irssi/away.log";
+    server_connect_timeout = "2min";
+  };
+  "fe-common/core" = {
+    theme = "gapz";
+    show_names_on_join = "no";
+    print_active_channel = "yes";
+    use_status_window = "yes";
+    autolog = "no";
+    hilight_color = "%8";
+    term_charset = "utf-8";
+    window_auto_change = "no";
+    autocreate_windows = "yes";
+    autocreate_own_query = "yes";
+    use_msgs_window = "yes";
+    reuse_unused_windows = "no";
+    autocreate_query_level = "MSGS DCCMSGS";
+    windows_auto_renumber = "yes";
+    emphasis = "yes";
+    timestamps = "yes";
+    autolog_path = "~/x/Logs/$tag_$winref.log";
+    hilight_act_color = "%8";
+    activity_msg_level = "PUBLIC";
+    activity_hide_level = "PUBLIC JOINS PARTS QUITS NICKS";
+    awaylog_colors = "no";
+    hide_colors = "yes";
+    show_nickmode_empty = "no";
+    timestamp_timeout = "0";
+    log_theme = "simpl2nocolor";
+    window_default_level = "MSGS DCCMSGS";
+    activity_hilight_level = "HILIGHT MSGS DCCMSGS";
+    bell_beeps = "no";
+    beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
+  };
+  "irc/core" = {
+    join_auto_chans_on_invite = "no";
+    alternate_nick = "f6k_";
+    ctcp_version_reply = "version 20150412";
+    ctcp_userinfo_reply = "version 20150412";
+  };
+  "fe-text" = {
+    indent = "0";
+    colors = "yes";
+    scroll_page_count = "/1";
+    scroll = "yes";
+    actlist_sort = "recent";
+  };
+  "perl/core/scripts" = {
+    trackbar_string = "-";
+    trackbar_style = "%n";
+    away_reason = "AFK [messages are logged]";
+    autoaway = "1200";
+    autounaway_level = "PUBLIC MSGS ACTIONS";
+    wlstat_placement = "top";
+    autoaway_timeout = "1200";
+  };
+  silc = {
+    alternate_nick = "";
+    sign_channel_messages = "yes";
+    sign_private_messages = "yes";
+  };
+  "irc/dcc" = {
+    dcc_autoget = "yes";
+    dcc_download_path = "~/b/";
+    dcc_mirc_ctcp = "yes";
+  };
+  "irc/flood" = { autoignore_level = ""; };
+  "xmpp/core" = { xmpp_set_nick_as_username = "no"; };
+  "fe-common/xmpp" = {
+    xmpp_status_window = "yes";
+    xmpp_roster_show_offline = "no";
+  };
+};
+
+## ┬ ┬o┬  o┌─┐┬ ┬┌┐┐┐─┐
+## │─┤││  ││ ┬│─┤ │ └─┐
+## │ ┴│└─┘│└─┘│ ┴ │ ──┘
+############## HILIGHTS
+
+hilights = (
+  { text = "f6k"; nick = "yes"; word = "yes"; }
+);
+
+## ┌┌┐o┐─┐┌─┐┬─┐┬  ┬  ┬─┐┌┐┐┬─┐┌─┐┬ ┐┐─┐
+## ││││└─┐│  ├─ │  │  │─┤│││├─ │ ││ │└─┐
+## ┘ ││──┘└─┘┴─┘└─┘└─┘┘ │ └┘┴─┘┘─┘└─┘──┘
+########################## MISCELLANEOUS
+
+ignores = ( );
+keyboard = ( );

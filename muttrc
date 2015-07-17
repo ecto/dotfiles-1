@@ -1,0 +1,84 @@
+################################################################################
+## ~/.muttrc
+
+## ┬─┐┬─┐┌─┐┬─┐o┐ ┬┬─┐  ┌─┐┬─┐┌┐┐o┌─┐┌┐┐┐─┐
+## │┬┘├─ │  ├─ ││┌┘├─   │ ││─┘ │ ││ ││││└─┐
+## │└┘┴─┘└─┘┴─┘│└┘ ┴─┘  ┘─┘│   │ │┘─┘ └┘──┘
+########################### RECEIVE OPTIONS
+
+set folder       = imaps://pop.openmailbox.org:993/
+set imap_user    = f6k@openmailbox.org
+set spoolfile    = +INBOX
+set postponed    = +Drafts
+mailboxes        = +INBOX
+set record       = +Sent
+set imap_passive = no
+set imap_check_subscribed = yes
+set imap_list_subscribed = yes
+set mail_check   = 120
+set timeout      = 300
+set imap_keepalive = 300
+
+## ┐─┐┬─┐┌┐┐┬─┐  ┌─┐┬─┐┌┐┐o┌─┐┌┐┐┐─┐
+## └─┐├─ ││││ │  │ ││─┘ │ ││ ││││└─┐
+## ──┘┴─┘ └┘┴─┘  ┘─┘│   │ │┘─┘ └┘──┘
+####################### SEND OPTIONS
+
+set smtp_url     = smtps://f6k@openmailbox.org@smtp.openmailbox.org:465/
+set realname     = FGK
+set from         = f6k@opmbx.org
+set signature    = "~/.signature"
+
+## ┌─┐┌─┐┌┐┐┌┐┐┬─┐┌─┐┌┐┐o┌─┐┌┐┐  ┌─┐┬─┐┌┐┐o┌─┐┌┐┐┐─┐
+## │  │ │││││││├─ │   │ ││ ││││  │ ││─┘ │ ││ ││││└─┐
+## └─┘┘─┘ └┘ └┘┴─┘└─┘ │ │┘─┘ └┘  ┘─┘│   │ │┘─┘ └┘──┘
+################################# CONNECTION OPTIONS
+
+set ssl_force_tls = yes
+set ssl_starttls = yes
+
+## ┌─┐┌┐┐┬ ┬┬─┐┬─┐┐─┐
+## │ │ │ │─┤├─ │┬┘└─┐
+## ┘─┘ │ │ ┴┴─┘│└┘──┘
+############## OTHERS
+
+set header_cache = ~/.mutt/cache/headers
+set certificate_file = ~/.mutt/certificates
+set message_cachedir = ~/.mutt/cache/bodies
+set use_envelope_from = yes
+set send_charset="utf-8"
+set sort = threads
+set pager_index_lines=8
+set beep=no
+set beep_new=yes
+
+## ┬┌ ┬─┐┐ ┬┬─┐o┌┐┐┬─┐o┌┐┐┌─┐┐─┐
+## ├┴┐├─ └┌┘│─││││││ ││││││ ┬└─┐
+## │ ┘┴─┘ │ ┴─┘│ └┘┴─┘│ └┘└─┘──┘
+#################### KEYBINDINGS
+
+bind index G imap-fetch-mail
+bind index J next-unread
+bind pager J next-unread
+bind index K previous-unread
+bind pager K previous-unread
+
+##
+##
+
+mailboxes !
+
+## ┬─┐┬─┐o┌┐┐┌─┐┬─┐
+## ├─ │ ││ │ │ ││┬┘
+## ┴─┘┴─┘│ │ ┘─┘│└┘
+############ EDITOR
+
+set edit_hdrs
+set editor="emacsclient -c %s"
+
+## ┌┌┐o┐─┐┌─┐┬─┐┬  ┬  ┬─┐┌┐┐┬─┐┌─┐┬ ┐┐─┐
+## ││││└─┐│  ├─ │  │  │─┤│││├─ │ ││ │└─┐
+## ┘ ││──┘└─┘┴─┘└─┘└─┘┘ │ └┘┴─┘┘─┘└─┘──┘
+########################## MISCELLANEOUS
+
+auto_view text/html

@@ -1,0 +1,10 @@
+################################################################################
+## ~/.frotzrc
+
+color		yes
+foreground	white
+backgrounnd	black
+zcode_path	/home/f6k/m/INFORM
+errormode	once
+ascii		no
+sound		on

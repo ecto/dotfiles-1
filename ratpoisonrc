@@ -1,0 +1,240 @@
+################################################################################
+## ~/.ratpoisonrc
+
+## ┬─┐┬─┐┬─┐┬─┐o┐ │  ┬┌ ┬─┐┐ ┬
+## │─┘│┬┘├─ ├─ │┌┼┘  ├┴┐├─ └┌┘
+## │  │└┘┴─┘│  ││ └  │ ┘┴─┘ │ 
+################### PREFIX KEY
+
+escape s-x
+
+## ┬─┐┐ ┬┬─┐  ┌─┐┬─┐┌┐┐┬─┐┐ ┬
+## ├─ └┌┘├─   │  │─┤││││ │└┌┘
+## ┴─┘ │ ┴─┘  └─┘┘ │ └┘┴─┘ │ 
+################### EYE CANDY
+
+# Use the name of the program rather than the title in the window list
+# (nw|w|sw|n|c|s|ne|e|se)
+defwinname name
+set border 0
+set barinpadding 1
+set barborder 0
+set barpadding 4 0
+set bargravity se
+set padding 0 0 0 0
+set bgcolor grey93
+set fgcolor black
+set bwcolor white
+set font "Monospace-10"
+msgwait 20
+set inputwidth 251
+set resizeunit 1
+startup_message on
+gravity c
+
+## ┐─┐┌┐┐┬─┐┌┐┐o┌─┐  ┬┌ ┬─┐┐ ┬┐─┐
+## └─┐ │ │─┤ │ ││    ├┴┐├─ └┌┘└─┐
+## ──┘ │ ┘ │ │ │└─┘  │ ┘┴─┘ │ ──┘
+###################### STATIC KEYS
+
+definekey top XF86ScreenSaver exec slock # Fn F2
+#definekey top XF86Sleep exec sudo pm-hibernate # Fn F4
+definekey top XF86Launch1 exec firefox # ThinkVantage button
+definekey top C-s-l nextscreen
+definekey top C-s-h prevscreen
+definekey top s-j focus
+definekey top s-k focusprev
+
+## ┬┌ ┬─┐┐ ┬┬─┐o┌┐┐┬─┐o┌┐┐┌─┐┐─┐
+## ├┴┐├─ └┌┘│─││││││ ││││││ ┬└─┐
+## │ ┘┴─┘ │ ┴─┘│ └┘┴─┘│ └┘└─┘──┘
+#################### KEYBINDINGS
+
+# Terminal
+alias term exec urxvt -bg "black" -fg "#fcefba"
+alias termblue exec urxvt -bg "#294c4a" #"#0000aa" # 0000b2
+alias termorange exec urxvt -bg darkorange2
+alias yeah exec yeahconsole
+bind Return term
+unbind C-exclam
+
+# Change the date
+unbind a
+alias date exec ratpoison -c "echo `date +'%a %m/%d %I:%M%p %Y'`"
+bind d date
+
+# Discordian date
+alias ddate exec ratpoison -c "echo $(ddate +"%a, Discord %d (%b), %Y YOLD")"
+bind a ddate
+
+ # Put a calendar
+unbind c
+alias calendar exec ratpoison -c "echo $(DAY=$( date +%e ); cal | sed -e "s,\( $DAY \),<$DAY>,")"
+bind c calendar
+
+# For executing some stuff from colon in statusbar
+alias echobar colon exec #ratpoison -c "echo $("
+
+# pkill
+alias killapp colon exec pkill $(ratpoison -c "Kill app: ")
+
+# Display usefull informations with conky
+alias conkybar exec ratpoison -c "echo $(conky -c ~/.conkyrc_script)"
+bind x conkybar
+
+# TODO
+alias todo exec ratpoison -c "echo $(todo.sh ls)"
+alias todolsc exec ratpoison -c "echo $(todo.sh ls $(ratpoison -c "prompt todo tag: "))"
+alias todoa exec todo.sh a $(ratpoison -c "prompt todo add: ")
+alias tododel exec todo.sh -f del $(ratpoison -c "prompt todo del: ")
+alias todopri exec todo.sh pri $(ratpoison -c "prompt todo pri: ")
+alias tododepri exec todo.sh depri $(ratpoison -c "prompt todo depri: ")
+newkmap super-t
+definekey super-t l todo
+definekey super-t t todolsc
+definekey super-t a todoa
+definekey super-t d tododel
+definekey super-t p todopri
+definekey super-t u tododepri
+definekey top s-t readkey super-t
+#bind t todo
+
+# TEL
+alias telephones exec rattel.sh $(ratpoison -c "prompt Name: ")
+bind T telephones
+
+# Print screen in a image file
+alias screenshot exec ratpoison -c "echo $(date +%s)_scrot.png printed" && scrot ~/$(date +%s)_scrot.png
+bind Print screenshot
+
+# Reload
+bind dollar restart
+
+# Store and restore frames layout
+bind F1 exec ratpoison -c "setenv fs1 `ratpoison -c 'fdump'`"
+bind ampersand exec ratpoison -c "frestore `ratpoison -c 'getenv fs1'`"
+bind F2 exec ratpoison -c "setenv fs2 `ratpoison -c 'fdump'`"
+bind eacute exec ratpoison -c "frestore `ratpoison -c 'getenv fs2'`"
+bind F3 exec ratpoison -c "setenv fs3 `ratpoison -c 'fdump'`"
+bind quotedbl exec ratpoison -c "frestore `ratpoison -c 'getenv fs3'`"
+
+# Just restore my default layout
+bind M-ampersand exec ratpoison -c "frestore $(cat ~/.ratpoison_env3)"
+
+# uptime
+alias uptime exec ratpoison -c "echo $(uptime)"
+
+# Mails
+alias gmail exec ratpoison -c "echo $(sh ~/e/gmail.sh)"
+bind g gmail
+
+# Battery infos
+alias battery exec ratpoison -c "echo $(thinkpad_smapi.sh -b0)"
+
+# Phunz
+alias randomfunfacts exec ratpoison -c "echo $(wget -q -O - http://randomfunfacts.com |grep strong | sed -e 's/<[^>]*>//g' -e 's/^\s*//' -e 's/\..\&nbsp\;/./' | fold -w 70)"
+bind M-b randomfunfacts
+
+# More phunz
+alias fortunes exec ratpoison -c "echo $(fortune 20% $HOME/.fortunes/chalkboard_nb 20% $HOME/.fortunes/fgump $HOME/.fortunes/xfiles $HOME/.fortunes/house-fr | sed -e 's/^\s*//')"
+bind M-c fortunes
+
+# Droit fortune cookies (?!)
+alias droit exec ratpoison -c "echo $(fortune $HOME/.fortunes/droit | sed -e 's/^\s*//')"
+bind M-d droit
+
+# Fukung phunz
+alias fukung exec feh -F "$(wget -q -O - http://fukung.net/ | grep "media.fukung.net" | head -n 1 | cut -d"\"" -f 4)"
+bind M-f fukung
+
+# Always phunz
+alias bonjourmadame exec feh -F $(wget -q -O - http://www.bonjourmadame.fr | grep -Eo "(http://www.bonjourmadame.fr/photo/[^\"]+)|(http://[0-9]+.media.tumblr.com/tumblr[^\"]+)" | head -n 1)
+bind M-x bonjourmadame
+
+# Infinite phunz
+alias xkcd exec feh -F $(lynx -nolist -dump http://xkcd.com/|grep "imgs.xkcd.com/comics/")
+bind M-v xkcd
+
+# RMS phunz
+alias rrmsfacts exec ratpoison -c "echo $(wget -q -O - http://stallmanfacts.com/random |grep Permalink |sed -e 's/<[^>]*>//g' | sed -e 's/^\s*//' | sed -e 's/ \#.*$//')"
+
+# My fucking weather
+alias fuckingweather exec ~/e/rp_fuckingweather.sh caen
+bind M-w fuckingweather
+
+## ┬─┐┬─┐┬─┐  ┬  ┬─┐┬ ┐┌┐┐┌─┐┬ ┬┬─┐┬─┐┐─┐
+## │─┤│─┘│─┘  │  │─┤│ │││││  │─┤├─ │┬┘└─┐
+## ┘ ││  │    └─┘┘ │└─┘ └┘└─┘│ ┴┴─┘│└┘──┘
+########################### APP LAUNCHERS
+
+# emacs
+alias emacsd exec if [ "$(pidof emacs)" ]; then ratpoison -c "echo emacs deamon already launched"; else emacs --daemon && ratpoison -c "echo emacs daemon launched"; fi
+alias emacs exec emacsclient -c
+bind E emacsd
+bind e emacs
+
+# chrome
+alias chrome exec /opt/google/chrome/chrome
+bind o chrome
+
+# Doom and Duke
+alias doom exec prboom -iwad ~/x/IWADs/DOOM/DOOM.WAD
+alias doom2 exec prboom -iwad ~/x/IWADs/DOOM2/DOOM2.WAD
+alias tnt exec prboom -iwad ~/x/IWADs/TNT/TNT.WAD
+alias plutonia exec prboom -iwad ~/x/IWADs/PLUTONIA/PLUTONIA.WAD
+alias freedoom exec prboom -iwad ~/x/IWADs/FREEDOOM/FREEDOOM.WAD
+alias chex3 exec zdoom -iwad ~/x/IWADs/CHEX3/CHEX3.WAD
+alias hexen exec zdoom -iwad ~/x/IWADs/HEXEN/HEXEN.WAD
+alias heretic exec zdoom -iwad ~/x/IWADs/HERETIC/HERETIC.WAD
+alias action2 exec zdoom -iwad ~/x/IWADs/ACTION2/ACTION2.WAD
+alias harmony exec zdoom -iwad ~/x/IWADs/HARMONY/HARM1.WAD
+alias strife exec zdoom -iwad ~/x/IWADs/STRIFE/STRIFE1.WAD
+alias duke3d exec sh /usr/local/bin/duke3d
+
+# armagetronad
+alias tron exec armagetronad
+
+# Mame
+alias mame exec advmame
+alias lsmame exec ratpoison -c "echo $(ls -1 ~/x/ROM/mame/)"
+
+# chess
+alias chess exec xboard -fcp "gnuchess depth 1 --easy --xboard"
+
+# FBReader
+alias fbreader exec FBReader
+bind f fbreader
+
+# dillo
+alias dillo exec dillo
+
+## ┬─┐┐─┐┐─┐
+## │┬┘└─┐└─┐
+## │└┘──┘──┘
+######## RSS
+
+alias rss_teamalexandriz exec ratpoison -c "echo $(rsstail -1N -u http://feeds.feedburner.com/TeamAlexandriz?format=xml | sed 's/\..rench.ebook.AlexandriZ//g')"
+alias rss_planetlibre exec ratpoison -c "echo $(rsstail -1N -n 10 -u http://www.planet-libre.org//feed.php?type=rss)"
+alias rss_slashdot exec ratpoison -c "echo $(rsstail -1N -n 10 -u http://rss.slashdot.org/Slashdot/slashdot)"
+alias rss_dm exec ratpoison -c "echo $(rsstail -1N -u http://www.dangerousminds.net/rss_2.0)"
+alias rss_ouest-france exec ratpoison -c "echo $(rsstail -1N -n 20 -u http://www.ouest-france.fr/dma-rss_-Toutes-les-DMA-RSS_6346--fils-tous--14118_filDMA.Htm)"
+alias rss_ouest-france_bn exec ratpoison -c "echo $(rsstail -n 20 -1N -u http://www.ouest-france.fr/dma-rss_-Toutes-les-DMA-bno-RSS_42314--pere-bno--14118_filDMA.Htm)"
+alias rss_boobieblog exec ratpoison -c "echo $(rsstail -1N -u http://www.boobieblog.com/?feed=rss2)"
+alias rss_wikinews exec ratpoison -c "echo $(rsstail -1N -n 10 -u 'http://toolserver.org/~cspurrier/rss/rss.php?lang=fr&family=wikinews&categories=Article%20publi%C3%A9')"
+alias rss_lemonde_une exec ratpoison -c "echo $(rsstail -1N -u http://www.lemonde.fr/rss/une.xml)"
+alias rss_lemonde_international exec ratpoison -c "echo $(rsstail -1N -u http://www.lemonde.fr/rss/sequence/0,2-3210,1-0,0.xml)"
+alias rss_lorientlejour exec ratpoison -c "echo $(rsstail -1N -u http://twitter.com/statuses/user_timeline/64385029.rss | sed 's/ LOrientLeJour: //;s/ http.*//g')"
+alias rss_mpl exec ratpoison -c "echo $(rsstail -1N -u http://mplbelgique.wordpress.com/feed/)"
+alias rss_ouestfrance exec ratpoison -c "echo $(rsstail -1N -u http://www.caen.maville.com/flux/rss/actu.php?xtor | sed 's/ *(Ouest-France)//g')"
+alias bashfr exec ratpoison -c "echo $(rsstail -1dH -n 1 -u http://feeds.feedburner.com/bashfr-quotes | sed 's/Description: //;s/Votez \!//g' | fmt -sw 80)"
+alias vdm exec ratpoison -c "echo $(rsstail -1dHNl -n1 -u http://feeds.feedburner.com/viedemerde | sed '1,2d' | fmt -sw 80)"
+alias asciiartfarts exec ratpoison -c "echo $(rsstail -1dHN -n1 -u http://www.asciiartfarts.com/farts.rss)"
+alias journaux_biggie exec ratpoison -c "echo $(rsstail -1Np -u http://biggie.eklablog.com/rss/538246-kiosque/)"
+
+## ┬─┐┌┐┐  ┐─┐┌┐┐┬─┐┬─┐┌┐┐
+## │─┤ │   └─┐ │ │─┤│┬┘ │ 
+## ┘ │ │   ──┘ │ ┘ ││└┘ │ 
+################# AT START
+
+banish
+exec ~/e/rpws init 3 -k

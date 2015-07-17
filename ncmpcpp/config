@@ -1,0 +1,45 @@
+################################################################################
+# ~/.ncmpcpp/config
+
+mpd_music_dir = "/home/f6k/m/musique"
+mpd_crossfade_time = "5"
+
+## ┬─┐┬  ┬─┐┐ ┬┬  o┐─┐┌┐┐
+## │─┘│  │─┤└┌┘│  │└─┐ │ 
+## │  └─┘┘ │ │ └─┘│──┘ │ 
+############### PLAYLIST
+
+autocenter_mode = "no"
+centered_cursor = "yes"
+cyclic_scrolling = "yes"
+mouse_list_scroll_whole_page = "no"
+song_list_format = "{%a - %t}|{%f}$R{%l}"
+
+## ┬─┐┬─┐┬─┐┐─┐
+## │─││─┤│┬┘└─┐
+## ┴─┘┘ ││└┘──┘
+########## BARS
+
+progressbar_look = "─C·"
+titles_visibility = "no"
+header_visibility = "no"
+statusbar_visibility = "no"
+
+## ┬─┐┬─┐┌─┐┐ ┬┐─┐┬─┐┬─┐
+## │─││┬┘│ ││││└─┐├─ │┬┘
+## ┴─┘│└┘┘─┘└┴┘──┘┴─┘│└┘
+################ BROWSER
+
+browser_playlist_prefix = "$2 ♥ $0 "
+browser_display_mode = "columns" (classic/columns)
+
+## ┌─┐┌┐┐┬ ┬┬─┐┬─┐┐─┐
+## │ │ │ │─┤├─ │┬┘└─┐
+## ┘─┘ │ │ ┴┴─┘│└┘──┘
+############## OTHERS
+
+colors_enabled = no
+song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
+search_engine_display_mode = "columns" (classic/columns)
+follow_now_playing_lyrics = "yes"
+display_screens_numbers_on_start = "yes"

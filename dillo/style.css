@@ -1,0 +1,18 @@
+body {
+    background: black;
+    color: #fcefba;
+}
+
+:link { color: #fcefba; }
+:visited { color: #808080; }
+
+
+code, tt, pre, samp, kbd {
+    font-family: monospace !important;
+    font-size: small
+}
+
+* {
+    font-family: monospace !important;
+    font-size: small
+}

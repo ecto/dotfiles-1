@@ -1,0 +1,158 @@
+################################################################################
+## ~/.Xdefaults
+
+## ┐ │┬─┐┌┐┐
+## ┌┼┘├─  │ 
+## │ └│   │ 
+####### XFT
+
+Xft.antialias:true
+Xft.dpi: 96
+
+## ┬─┐┌┌┐┬─┐┌─┐┐─┐
+## ├─ ││││─┤│  └─┐
+## ┴─┘┘ │┘ │└─┘──┘
+############ EMACS
+
+Emacs.geometry:81x48+9+7
+Emacs.font: Monospace-9
+Emacs.reverseVideo: true
+Emacs.geometry:80x41+0+0
+
+## ┬ ┐┬─┐┐ │┐ ┬┌┐┐
+## │ ││┬┘┌┼┘│┌┘ │ 
+## └─┘│└┘│ └└┘  │ 
+########### URXVT
+
+Rxvt*title:[rxvt-unicode (urxvt)]
+Rxvt*background: black
+Rxvt*foreground: #fcefba
+Rxvt*geometry:80x24
+Rxvt*scrollBar: false
+Rxvt*scrollstyle: next
+Rxvt*scrollBar_right: false
+Rxvt*scrollColor: #fcefba
+Rxvt*loginShell:true
+Rxvt*colorMode:false
+Rxvt*colorBD: #fcefba
+Rxvt*font:xft:Monospace-9
+Rxvt*cursorBlink:true
+#URxvt.perl-ext: default,matcher
+#URxvt.url-launcher: firefox
+#Rxvt*matcher.button: 2
+#Rxvt*matcher.pattern.1: \\b(gopher|http|https):[/]*[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+#Rxvt*matcher.pattern.2: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+
+## ┐ │┌─┐┬  ┌─┐┌─┐┬┌ 
+## ┌┼┘│  │  │ ││  ├┴┐
+## │ └└─┘└─┘┘─┘└─┘│ ┘
+############## XCLOCK
+
+XClock*width:100
+XClock*height:100
+XClock*geometry:48x48+542+534
+XClock*background:black
+XClock*hourColor:#fcefba
+XClock*minuteColor:#fcefba
+XClock*secondColor:#fcefba
+XClock*majorColor:#fcefba
+XClock*minorColor:#fcefba
+
+## ┐ │┬─┐┌─┐┬─┐┬─┐┬─┐
+## ┌┼┘│─││ ││─┤│┬┘│ │
+## │ └┴─┘┘─┘┘ ││└┘┴─┘
+############## XBOARD
+
+XBoard*boardSize:Slim
+# XBoard*font:-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+# XBoard*clockFont:-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+# XBoard*coordFont:-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+XBoard*showCoords:true
+XBoard*highlightLastMove:true
+XBoard*flashCount:3
+XBoard*flashRate:5
+XBoard*showButtonBar:false
+XBoard*titleInWindow:true
+XBoard*showThinking:true
+XBoard*ringBellAfterMoves:true
+#XBoard*soundProgram:mplayer -really-quiet
+#XBoard*soundMove: ~/x/snd/TokyoTrainStation.AdiumSoundset/New.wav
+#XBoard*form.translations: Ctrl<Key>: NothingProc()
+
+## ┐ ┬┬─┐┬─┐┬ ┬┌─┐┌─┐┌┐┐┐─┐┌─┐┬  ┬─┐
+## └┌┘├─ │─┤│─┤│  │ ││││└─┐│ ││  ├─ 
+##  │ ┴─┘┘ ││ ┴└─┘┘─┘ └┘──┘┘─┘└─┘┴─┘
+######################## YEAHCONSOLE
+
+yeahconsole*term: urxvt
+yeahconsole*restart: 0
+yeahconsole*xOffset: 0
+yeahconsole*screenWidth: 1024
+yeahconsole*consoleHeight: 20
+yeahconsole*aniDelay: 20
+yeahconsole*stepSize: 1
+yeahconsole*handleWidth:1
+yeahconsole*handleColor:#fcefba
+yeahconsole*toggleKey: None+Pause
+
+## ┐ │┌─┐┬─┐┬  ┌─┐
+## ┌┼┘│  │─┤│  │  
+## │ └└─┘┘ │└─┘└─┘
+############ XCALC
+
+*xcalc*screen*background: rgb:f/e/8
+*xcalc*button22.background: #fcefba
+*xcalc*button23.background: #fcefba
+*xcalc*button24.background: #fcefba
+*xcalc*button27.background: #fcefba
+*xcalc*button28.background: #fcefba
+*xcalc*button29.background: #fcefba
+*xcalc*button32.background: #fcefba
+*xcalc*button33.background: #fcefba
+*xcalc*button34.background: #fcefba
+*xcalc*button37.background: #fcefba
+*xcalc*button38.background: #fcefba
+*xcalc*button39.background: #fcefba
+*xcalc*button20.background: rgb:e/a/7
+*xcalc*button25.background: rgb:e/a/7
+*xcalc*button30.background: rgb:e/a/7
+*xcalc*button35.background: rgb:e/a/7
+*xcalc*button40.background: rgb:e/a/7
+
+## ┐ │┬─┐┬─┐┬─┐
+## ┌┼┘│─┘│ │├─ 
+## │ └│  ┴─┘│  
+########## XPDF
+
+xpdf*fontList:-*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+
+## ┌┌┐o┐─┐┌─┐┬─┐┬  ┬  ┬─┐┌┐┐┬─┐┌─┐┬ ┐┐─┐
+## ││││└─┐│  ├─ │  │  │─┤│││├─ │ ││ │└─┐
+## ┘ ││──┘└─┘┴─┘└─┘└─┘┘ │ └┘┴─┘┘─┘└─┘──┘
+########################## MISCELLANEOUS
+
+*Form.background: gray40
+*Command.background: gray
+
+## ┌─┐┌─┐┬  ┌─┐┬─┐┐─┐
+## │  │ ││  │ ││┬┘└─┐
+## └─┘┘─┘└─┘┘─┘│└┘──┘
+############## COLORS
+
+# to avoid problems
+*.color0: black
+#*.color1: #fcefba
+*.color2: #fcefba
+*.color3: #fcefba
+*.color4: #fcefba
+*.color5: #fcefba
+*.color6: #fcefba
+*.color7: #fcefba
+*.color8: black
+#*.color9: #fcefba
+*.color10: #fcefba
+*.color11: #fcefba
+*.color12: #fcefba
+*.color13: #fcefba
+*.color14: #fcefba
+*.color15: #fcefba

@@ -1,87 +1,32 @@
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! .larswmrc configuration file !
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! ~/.larswmrc
 
-!!!!!!!!
-! THEMES
+!! ┌┐┐┬ ┬┬─┐┌┌┐┬─┐┐─┐
+!!  │ │─┤├─ │││├─ └─┐
+!!  │ │ ┴┴─┘┘ │┴─┘──┘
+!!!!!!!!!!!!!! THEMES
 
-!!!!!! BeOS Like
+!! BeOS Like
 !larswm.foreground: #000000
 !larswm.background: #ffcc00
 
-!!!!!! Dark One
-!larswm.background: #222
-!larswm.foreground: #ccc
-
-!!!!!! Green
-!larswm.background: #015f2a
-!larswm.foreground: #ffffff
-
-!!!!!! Brown
-!larswm.background: #31241e
-
-!!!!!! B&W
-!larswm.foreground: white
-!larswm.background: #dd3930
-
-!!!!!! Novellenet
-!larswm.background: #7eb2cc
-!larswm.foreground: #000000
-
-!!!!!! vanille+fraise
-!larswm.background: #cd6090
-!larswm.background: #ab505e
-
-!larswm.background: maroon
-!larswm.foreground: #FFFFF0
-
-!!!!!! BlueOne
-!larswm.background: #000080
-!larswm.foreground: yellow
-
-!!!!!! w9
-!larswm.background: #bdbdbd
-!larswm.foreground: black
-
-!!!!!! w00t!
-!larswm.background: orange
-!larswm.foreground: black
-
-!!!!!! red
-!larswm.background: lightred
-!larswm.foreground: black
-
-!larswm.foreground: #000000
-!larswm.background: #dcdad5
-!larswm.background: grey90
-
+!! Monochrome
 larswm.background: black
-#larswm.foreground: #FF0000
-larswm.foreground: grey90
-#larswm.foreground: #FFBF00
+larswm.foreground: #fcefba
 
-! Status bar font
-!
-!larswm.font: -*-fixed-*-*-*-*-14-*-*-*-*-*-*-*
-!larswm.font: -misc-fixed-medium-r-normal-*-13-100-100-100-c-70-*-*
-!larswm.font: -*-terminus-*-*-*-*-14-*-*-*-*-*-*-*
-!larswm.font: -*-terminus-*-r-*-*-14-*-*-*-*-*-*-*
-!larswm.font:  -*-terminus-medium-r-normal-*-14-*-72-72-c-80-iso10646-1
-larswm.font: -*-dejavu sans mono-medium-r-*-*-12-*-*-*-*-*-*-*
+!! Status bar font
+larswm.font: -*-dejavu sans mono-medium-r-*-*-9-*-*-*-*-*-*-*
 
-! Taille de la bordure sur le cote
-!
+!! Winwow border size
 larswm.border: 0
 
-!
-! How many pixels between windows: (0 - 128 pixels)
-!
+!! Pixels between windows (0 - 128 pixels)
 larswm.tile_pad: 1
 
+!! Number of desktop
 larswm.desktops: 3
 
-! Desktop names - same on all monitors
-!
+!! Desktop names - same on all monitors
 larswm.0.0.dtname: [0--]
 larswm.0.1.dtname: [-1-]
 larswm.0.2.dtname: [--2]
@@ -89,33 +34,28 @@ larswm.0.2.dtname: [--2]
 larswm.1.0.dtname: [!-]
 larswm.1.1.dtname: [-!]
 
-! These are the windows I want tiled
-!
+!! Windows I want tiled
 !larswm.dotileclass.0: rxvt
 !larswm.dotileclass.1: navigator:browser~Mozilla
 !larswm.dotileclass.2: Emacs~emacs
 !larswm.dotileclass.1: Eterm
 
-! Some tool windows
-!
+!! Tool windows
 larswm.toolclass.0: Conky~Conky
 larswm.toolclass.1: XLoad~xload
 larswm.toolclass.2: XBiff~xbiff
 larswm.toolclass.3: XClock~xclock
 larswm.toolclass.4: WMdl~wmdl
 
-! Windows that should always stay above other windows
-!
+!! Windows that always stay above other windows
 larswm.floatclass.0: MPlayer~xv
 larswm.floatclass.1: vlc
 larswm.floatclass.2: XBoard~xboard
 
-! Windows that should be visible on all virtual desktops
-!
+!! Windows visible on all virtual desktops
 !larswm.stickyclass.0: aterm-xterm
 
-! Assign all new web browser windows to the WWW desktop
-!
+!! Assign applications to specific desktops
 !larswm.dtclass.0: navigator:browser~Mozilla
 !larswm.dtnum.0: 1
 !larswm.dtclass.1: Mozilla-bin
@@ -123,26 +63,24 @@ larswm.floatclass.2: XBoard~xboard
 !larswm.dtclass.0: MPlayer~xv
 !larswm.dtnum.0: 1
 
+!! I don't remember what's this
 !larswm.switchclass_app.0: google-chrome
 !larswm.switchclass_key.0: XF86Launch1
 !larswm.switchclass_mod.0:
 
-! Set tiled windows' width
-!larswm.?.?.left_track_width: 91
+!! Tiled windows' width
 larswm.?.?.left_track_width: 57
-!larswm.0.?.left_track_width: 66
-!larswm.1.?.left_track_width: 48
 
-! Do not resize windows on the WWW desktop
-!
+!! Do not resize windows on the WWW desktop
 !larswm.?.1.tile_resize: False
 
-! Automatically shift focused window to the left track on WWW desktop
-!
+!! Automatically shift focused window to the left track on WWW desktop
 !larswm.?.1.skip_focus: False
-!
 
-!!!!!! APPLICATION
+!! ┬─┐┬─┐┬─┐┬  o┌─┐┬─┐┌┐┐o┌─┐┌┐┐┐─┐  ┬┌ ┬─┐┐ ┬┬─┐o┬─┐o┌┐┐┌─┐┐─┐
+!! │─┤│─┘│─┘│  ││  │─┤ │ ││ ││││└─┐  ├┴┐├─ └┌┘│─│││ ││││││ ┬└─┐
+!! ┘ ││  │  └─┘│└─┘┘ │ │ │┘─┘ └┘──┘  │ ┘┴─┘ │ ┴─┘│┴─┘│ └┘└─┘──┘
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! APPLICATIONS KEYBIDINGS
 
 larswm.application.0: urxvt
 larswm.application_key.0: Return
@@ -156,7 +94,6 @@ larswm.application.2: larsremote restart
 larswm.application_key.2: r
 larswm.application_mod.2: Shift+Control
 
-!larswm.application.3: xlock -mode space -font "-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*" -bg black -fg white
 larswm.application.3: slock
 larswm.application_key.3: XF86ScreenSaver
 larswm.application_mod.3:
@@ -194,12 +131,10 @@ larswm.application.11: FBReader
 larswm.application_key.11: f
 larswm.application_mod.11: Shift+Control
 
-larswm.application.12: urxvt -bg "#264141"
-!larswm.application.12: urxvt -bg darkblue
-larswm.application_key.12: x
-larswm.application_mod.12: Shift+Control
-
-!!!!!! WINDOW
+!! ┐ ┬┌┌┐  ┬┌ ┬─┐┐ ┬┬─┐o┌┐┐┬─┐o┌┐┐┌─┐┐─┐
+!! ││││││  ├┴┐├─ └┌┘│─││││││ ││││││ ┬└─┐
+!! └┴┘┘ │  │ ┘┴─┘ │ ┴─┘│ └┘┴─┘│ └┘└─┘──┘
+!!!!!!!!!!!!!!!!!!!!!!!!! WM KEYBINDINGS
 
 larswm.prev_screen_key: h
 larswm.prev_screen_mod: Shift+Alt

@@ -232,7 +232,7 @@ abstracts = {
   sb = "%n$*/%n"; # %8>%n
   sbmode = "";
   sbaway = "/away";
-  #sbservertag = ":[$0]";
+  sbservertag = "$0";
   hilight_color = "%8";
 
   # activity in statusbar

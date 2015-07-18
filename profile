@@ -92,6 +92,7 @@ alias psm='ps gaxo %cpu,%mem,pid,comm | sort +0nr | head -n 10'
 alias rss="rsstail -tlpaHv"
 alias lastkernelvers="curl -Ss https://www.kernel.org/finger_banner 2>&1"
 alias alsamixer="alsamixer -g"
+alias slrn="slrn -C-"
 
 # FORTUNE COOKIES
 alias xfiles="fortune ~/.fortunes/xfiles"

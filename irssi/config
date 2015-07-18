@@ -118,6 +118,7 @@ aliases = {
   UMODE = "mode $N";
   WC = "window close";
   WN = "window new hide";
+  WL = "window list"
   SV = "say Irssi $J ($V) - http://irssi.org/";
   GOTO = "sb goto";
   CHAT = "dcc chat";
@@ -301,7 +302,7 @@ settings = {
     theme = "vt100";
     show_names_on_join = "no";
     print_active_channel = "yes";
-    use_status_window = "yes";
+    use_status_window = "no";
     autolog = "no";
     hilight_color = "%8";
     term_charset = "utf-8";
@@ -309,7 +310,7 @@ settings = {
     autocreate_windows = "yes";
     autocreate_own_query = "yes";
     use_msgs_window = "yes";
-    reuse_unused_windows = "no";
+    reuse_unused_windows = "yes";
     autocreate_query_level = "MSGS DCCMSGS";
     windows_auto_renumber = "yes";
     emphasis = "yes";
@@ -322,7 +323,7 @@ settings = {
     hide_colors = "yes";
     show_nickmode_empty = "no";
     timestamp_timeout = "0";
-    log_theme = "simpl2nocolor";
+    log_theme = "vt100";
     window_default_level = "MSGS DCCMSGS";
     activity_hilight_level = "HILIGHT MSGS DCCMSGS";
     bell_beeps = "no";
@@ -331,8 +332,8 @@ settings = {
   "irc/core" = {
     join_auto_chans_on_invite = "no";
     alternate_nick = "f6k_";
-    ctcp_version_reply = "version 20150412";
-    ctcp_userinfo_reply = "version 20150412";
+    ctcp_version_reply = "version 20050412";
+    ctcp_userinfo_reply = "version 20050412";
   };
   "fe-text" = {
     indent = "0";
@@ -363,7 +364,7 @@ settings = {
   "irc/flood" = { autoignore_level = ""; };
   "xmpp/core" = { xmpp_set_nick_as_username = "no"; };
   "fe-common/xmpp" = {
-    xmpp_status_window = "yes";
+    xmpp_status_window = "no";
     xmpp_roster_show_offline = "no";
   };
 };

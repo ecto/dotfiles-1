@@ -155,6 +155,13 @@
       (append '(("/tmp/mutt.*" . mail-mode)) auto-mode-alist)) ; mutt support
 (electric-pair-mode t)
 
+;; ┐ ┬┌─┐┌┌┐┬─┐┌┐┐
+;; ││││ │││││─┤│││
+;; └┴┘┘─┘┘ │┘ │ └┘
+;;;;;;;;;;;; WOMAN
+
+(setq woman-fill-column 78)
+
 ;; o┬─┐┌─┐
 ;; ││ ││ │
 ;; │┴─┘┘─┘

@@ -1,0 +1,292 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! .larswmrc configuration file !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!
+! THEMES
+
+!!!!!! BeOS Like
+!larswm.foreground: #000000
+!larswm.background: #ffcc00
+
+!!!!!! Dark One
+!larswm.background: #222
+!larswm.foreground: #ccc
+
+!!!!!! Green
+!larswm.background: #015f2a
+!larswm.foreground: #ffffff
+
+!!!!!! Brown
+!larswm.background: #31241e
+
+!!!!!! B&W
+!larswm.foreground: white
+!larswm.background: #dd3930
+
+!!!!!! Novellenet
+!larswm.background: #7eb2cc
+!larswm.foreground: #000000
+
+!!!!!! vanille+fraise
+!larswm.background: #cd6090
+!larswm.background: #ab505e
+
+!larswm.background: maroon
+!larswm.foreground: #FFFFF0
+
+!!!!!! BlueOne
+!larswm.background: #000080
+!larswm.foreground: yellow
+
+!!!!!! w9
+!larswm.background: #bdbdbd
+!larswm.foreground: black
+
+!!!!!! w00t!
+!larswm.background: orange
+!larswm.foreground: black
+
+!!!!!! red
+!larswm.background: lightred
+!larswm.foreground: black
+
+!larswm.foreground: #000000
+!larswm.background: #dcdad5
+!larswm.background: grey90
+
+larswm.background: black
+#larswm.foreground: #FF0000
+larswm.foreground: grey90
+#larswm.foreground: #FFBF00
+
+! Status bar font
+!
+!larswm.font: -*-fixed-*-*-*-*-14-*-*-*-*-*-*-*
+!larswm.font: -misc-fixed-medium-r-normal-*-13-100-100-100-c-70-*-*
+!larswm.font: -*-terminus-*-*-*-*-14-*-*-*-*-*-*-*
+!larswm.font: -*-terminus-*-r-*-*-14-*-*-*-*-*-*-*
+!larswm.font:  -*-terminus-medium-r-normal-*-14-*-72-72-c-80-iso10646-1
+larswm.font: -*-dejavu sans mono-medium-r-*-*-12-*-*-*-*-*-*-*
+
+! Taille de la bordure sur le cote
+!
+larswm.border: 0
+
+!
+! How many pixels between windows: (0 - 128 pixels)
+!
+larswm.tile_pad: 1
+
+larswm.desktops: 3
+
+! Desktop names - same on all monitors
+!
+larswm.0.0.dtname: [0--]
+larswm.0.1.dtname: [-1-]
+larswm.0.2.dtname: [--2]
+
+larswm.1.0.dtname: [!-]
+larswm.1.1.dtname: [-!]
+
+! These are the windows I want tiled
+!
+!larswm.dotileclass.0: rxvt
+!larswm.dotileclass.1: navigator:browser~Mozilla
+!larswm.dotileclass.2: Emacs~emacs
+!larswm.dotileclass.1: Eterm
+
+! Some tool windows
+!
+larswm.toolclass.0: Conky~Conky
+larswm.toolclass.1: XLoad~xload
+larswm.toolclass.2: XBiff~xbiff
+larswm.toolclass.3: XClock~xclock
+larswm.toolclass.4: WMdl~wmdl
+
+! Windows that should always stay above other windows
+!
+larswm.floatclass.0: MPlayer~xv
+larswm.floatclass.1: vlc
+larswm.floatclass.2: XBoard~xboard
+
+! Windows that should be visible on all virtual desktops
+!
+!larswm.stickyclass.0: aterm-xterm
+
+! Assign all new web browser windows to the WWW desktop
+!
+!larswm.dtclass.0: navigator:browser~Mozilla
+!larswm.dtnum.0: 1
+!larswm.dtclass.1: Mozilla-bin
+!larswm.dtnum.1: 1
+!larswm.dtclass.0: MPlayer~xv
+!larswm.dtnum.0: 1
+
+!larswm.switchclass_app.0: google-chrome
+!larswm.switchclass_key.0: XF86Launch1
+!larswm.switchclass_mod.0:
+
+! Set tiled windows' width
+!larswm.?.?.left_track_width: 91
+larswm.?.?.left_track_width: 57
+!larswm.0.?.left_track_width: 66
+!larswm.1.?.left_track_width: 48
+
+! Do not resize windows on the WWW desktop
+!
+!larswm.?.1.tile_resize: False
+
+! Automatically shift focused window to the left track on WWW desktop
+!
+!larswm.?.1.skip_focus: False
+!
+
+!!!!!! APPLICATION
+
+larswm.application.0: urxvt
+larswm.application_key.0: Return
+larswm.application_mod.0: Shift+Control
+
+larswm.application.1: larsremote exit
+larswm.application_key.1: z
+larswm.application_mod.1: Shift+Control
+
+larswm.application.2: larsremote restart
+larswm.application_key.2: r
+larswm.application_mod.2: Shift+Control
+
+!larswm.application.3: xlock -mode space -font "-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*" -bg black -fg white
+larswm.application.3: slock
+larswm.application_key.3: XF86ScreenSaver
+larswm.application_mod.3:
+
+larswm.application.4: firefox
+larswm.application_key.4: XF86Launch1
+larswm.application_mod.4:
+
+larswm.application.5: dillo
+larswm.application_key.5: d
+larswm.application_mod.5: Shift+Control
+
+larswm.application.6: scummvm
+larswm.application_key.6: s
+larswm.application_mod.6: Shift+Control
+
+larswm.application.7: sudo pm-hibernate
+larswm.application_key.7: XF86Sleep
+larswm.application_mod.7:
+
+larswm.application.8: dmenu_run -i -b -nb '#fcefba' -nf 'black' -sb 'black' -sf '#fcefba' -fn '-misc-fixed-medium-r-normal-*-13-100-100-100-c-70-*-*'
+larswm.application_key.8: F12
+larswm.application_mod.8:
+
+!larswm.application.9: import -window root ~/`date +%s`_scrot.png
+larswm.application.9: scrot ~/$(date +%s)_scrot.png
+larswm.application_key.9: Print
+larswm.application_mod.9:
+
+larswm.application.10: emacsclient -c
+larswm.application_key.10: e
+larswm.application_mod.10: Shift+Control
+
+larswm.application.11: FBReader
+larswm.application_key.11: f
+larswm.application_mod.11: Shift+Control
+
+larswm.application.12: urxvt -bg "#264141"
+!larswm.application.12: urxvt -bg darkblue
+larswm.application_key.12: x
+larswm.application_mod.12: Shift+Control
+
+!!!!!! WINDOW
+
+larswm.prev_screen_key: h
+larswm.prev_screen_mod: Shift+Alt
+!
+larswm.next_screen_key: l
+larswm.next_screen_mod: Shift+Alt
+!
+larswm.prev_desktop_key: h
+larswm.prev_desktop_mod: Mod4
+!
+larswm.next_desktop_key: l
+larswm.next_desktop_mod: Mod4
+!
+larswm.prev_window_key: k
+larswm.prev_window_mod: Mod4
+!
+larswm.next_window_key: j
+larswm.next_window_mod: Mod4
+!
+larswm.hide_mod: Mod4
+larswm.hide_key: y
+!
+larswm.unhide_mod: Mod4
+larswm.unhide_key: u
+!
+larswm.close_mod: Mod4
+larswm.close_key: c
+!
+larswm.zoom_full_mod: Mod4
+larswm.zoom_full_key: m
+!
+larswm.zoom_vert_mod: Mod4
+larswm.zoom_vert_key: g
+!
+larswm.zoom_horiz_mod: Mod4
+larswm.zoom_horiz_key: v
+!
+larswm.grow_both_mod: Mod4
+larswm.grow_both_key: p
+!
+larswm.shrink_both_mod: Mod4
+larswm.shrink_both_key: o
+!
+larswm.grow_vert_key: k
+larswm.grow_vert_mod: Shift+Control
+!
+larswm.shrink_vert_key: j
+larswm.shrink_vert_mod: Shift+Control
+!
+larswm.grow_horiz_key: l
+larswm.grow_horiz_mod: Shift+Control
+!
+larswm.shrink_horiz_key: h
+larswm.shrink_horiz_mod: Shift+Control
+!
+larswm.move_up_key: Up
+larswm.move_up_mod: Mod4
+!
+larswm.move_down_key: Down
+larswm.move_down_mod: Mod4
+!
+larswm.move_left_key: Left
+larswm.move_left_mod: Mod4
+!
+larswm.move_right_key: Right
+larswm.move_right_mod: Mod4
+!
+larswm.move_sd_mod: Shift+Control
+larswm.move_sd_key: p
+!
+larswm.move_aside_mod: Shift+Control
+larswm.move_aside_key: g
+!
+larswm.raise_notile_mod: Mod4
+larswm.raise_notile_key: i
+!
+larswm.goto_desktop_key[0]: XK_ampersand
+larswm.goto_desktop_mod[0]: Alt
+!
+larswm.goto_desktop_key[1]: XK_eacute
+larswm.goto_desktop_mod[1]: Alt
+!
+larswm.goto_desktop_key[2]: XK_quotedbl
+larswm.goto_desktop_mod[2]: Alt
+!
+larswm.goto_desktop_key[3]: XK_apostrophe
+larswm.goto_desktop_mod[3]: Alt
+!
+larswm.floatclass_key: s
+larswm.floatclass_mod: Mod4

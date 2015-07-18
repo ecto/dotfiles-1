@@ -1,0 +1,18 @@
+################################################################################
+## ~/.ncmpcpp/keys
+
+key_enter = 10 'x'
+key_stop = 'v'
+key_pause = 'c'
+key_next = 'b'
+key_prev = 'w'
+key_seek_forward = 'f'
+key_seek_backward = 'F'
+key_toggle_repeat = 'r'
+key_toggle_random = '0'
+key_toggle_single = 'y'
+key_toggle_consume = 'R'
+key_shuffle = 's'
+key_toggle_crossfade = 'X'
+key_set_crossfade = '0'
+key_update_db = 'u'

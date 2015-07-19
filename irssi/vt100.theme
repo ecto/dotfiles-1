@@ -225,7 +225,7 @@ abstracts = {
   sbstart = "";
   # text at the end of statusbars. Use space so that it's never
   # used for anything.
-  sbend = " ";
+  sbend = "────────────────────────────────────────────────────────────────────────────────";
 
   prompt = "%n>%n "; # %8>%n
 

@@ -123,6 +123,7 @@ aliases = {
   GOTO = "sb goto";
   CHAT = "dcc chat";
   RUN = "SCRIPT LOAD";
+  HIDEADD = "eval set activity_hide_targets $activity_hide_targets $C"
   UPTIME = "eval exec - expr `date +%s` - \\$F | awk '{print \"Irssi uptime: \"int(\\\\\\$1/3600/24)\"d \"int(\\\\\\$1/3600%24)\"h \"int(\\\\\\$1/60%60)\"m \"int(\\\\\\$1%60)\"s\" }'";
   CALC = "exec - if which bc &>/dev/null\\; then echo '$*' | bc | awk '{print \"$*=\"$$1}'\\; else echo bc was not found\\; fi";
   SBAR = "STATUSBAR";
@@ -278,6 +279,7 @@ statusbar = {
     enable = { disabled = "yes"; };
     remove = { disabled = "yes"; };
     disable = { disabled = "yes"; };
+    line = { items = { barend = { }; }; };
   };
 };
 
@@ -318,7 +320,7 @@ settings = {
     autolog_path = "~/x/Logs/$tag_$winref.log";
     hilight_act_color = "%8";
     activity_msg_level = "PUBLIC";
-    activity_hide_level = "PUBLIC JOINS PARTS QUITS NICKS MODES KICKS TOPICS";
+    activity_hide_level = "JOINS PARTS QUITS NICKS MODES KICKS TOPICS";
     awaylog_colors = "no";
     hide_colors = "yes";
     show_nickmode_empty = "no";
@@ -343,7 +345,7 @@ settings = {
     actlist_sort = "recent";
   };
   "perl/core/scripts" = {
-    trackbar_string = "-";
+    trackbar_string = "- ";
     trackbar_style = "%n";
     away_reason = "AFK [messages are logged]";
     autoaway = "1200";

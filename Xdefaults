@@ -141,7 +141,7 @@ xpdf*fontList:-*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
 
 # to avoid problems
 *.color0: black
-#*.color1: #fcefba
+*.color1: #fcefba
 *.color2: #fcefba
 *.color3: #fcefba
 *.color4: #fcefba
@@ -149,7 +149,7 @@ xpdf*fontList:-*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
 *.color6: #fcefba
 *.color7: #fcefba
 *.color8: black
-#*.color9: #fcefba
+*.color9: #fcefba
 *.color10: #fcefba
 *.color11: #fcefba
 *.color12: #fcefba

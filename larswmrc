@@ -131,6 +131,10 @@ larswm.application.11: FBReader
 larswm.application_key.11: f
 larswm.application_mod.11: Shift+Control
 
+larswm.application.12: gvim
+larswm.application_key.12: v
+larswm.application_mod.12: Shift+Control
+
 !! ┐ ┬┌┌┐  ┬┌ ┬─┐┐ ┬┬─┐o┌┐┐┬─┐o┌┐┐┌─┐┐─┐
 !! ││││││  ├┴┐├─ └┌┘│─││││││ ││││││ ┬└─┐
 !! └┴┘┘ │  │ ┘┴─┘ │ ┴─┘│ └┘┴─┘│ └┘└─┘──┘

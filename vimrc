@@ -26,6 +26,10 @@ set tabstop=2                    " indentation every four columns
 set softtabstop=2                " backspace delete indent
 set nobackup                     " no backup files
 set ffs=unix,dos,mac             " all filformats
+"set wrap linebreak nolist        " soft wrap
+"set tw=78                        " hard wrap
+"set formatoptions+=t             " hard wrap
+
 
 "" o┌┐┐┌┐┐┬─┐┬─┐┬─┐┬─┐┌─┐┬─┐
 "" ││││ │ ├─ │┬┘├─ │─┤│  ├─ 

@@ -16,7 +16,7 @@ load_images=YES
 
 # Change this if you want to disable loading of CSS stylesheets initially.
 # (While browsing, this can be changed from the tools/settings menu.)
-load_stylesheets=NO
+load_stylesheets=YES
 
 # Change this if you want to disable parsing of embedded CSS initially.
 # (While browsing, this can be changed from the tools/settings menu.)

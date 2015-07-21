@@ -128,40 +128,6 @@ alias xkcd='feh $(lynx -nolist -dump http://xkcd.com/|grep "imgs.xkcd.com/comics
 alias dilbert='feh $(wget -q -O - http://dilbert.com |grep STR_EmbedCode |cut -d "\"" -f12)'
 alias bonjourmadame='feh $(wget -q -O - http://www.bonjourmadame.fr | grep -Eo "(http://[0-9]+.media.tumblr.com/[^\"]+.jpg)" |head -n 1)'
 
-# RADIOS
-alias radiofranceculture='mpg123 -vC http://audio.scdn.arkena.com/11010/franceculture-midfi128.mp3'
-alias radiofranceinter='mpg123 -vC http://audio.scdn.arkena.com/11008/franceinter-midfi128.mp3'
-alias radiofranceinfo='mpg123 -vC http://audio.scdn.arkena.com/11006/franceinfo-midfi128.mp3'
-alias radio666='mpg123 -C -@ http://www.radio666.com/ecouter/radio666.pls'
-alias radioeurope1='mpg123 -vC http://95.81.155.10/10489/europe1.mp3'
-alias radiortl='mplayer -playlist http://radio.rtl.fr/rtl.pls'
-alias radiolemouv='mpg123 -Cv http://audio.scdn.arkena.com/11014/mouv-midfi128.mp3'
-alias radionova='mpg123 -Cv http://broadcast.infomaniak.net/radionova-high.mp3'
-alias radiofunradio='mplayer http://streaming.radio.funradio.fr:80/fun-1-44-128'
-alias radioskyrock='mplayer http://cache.yacast.fr/V4/skyrock/skyrock.asx'
-alias radiocanada='mpg123 --no-icy-meta -vC http://2QMTL0.akacast.akamaistream.net:80/7/953/177387/v1/rc.akacast.akamaistream.net/2QMTL0'
-alias radioespacemusique='mpg123 -vC http://7qmtl0.akacast.akamaistream.net/7/445/177407/v1/rc.akacast.akamaistream.net/7QMTL0'
-alias radiordi='mpg123 -vC http://RDIRADIO.akacast.akamaistream.net:80/7/501/177423/v1/rc.akacast.akamaistream.net/RDIRADIO'
-alias radiospvm='mpg123 --no-icy-meta -vC http://relay.broadcastify.com:80/796464909'
-alias radiolapd='mplayer http://relay.broadcastify.com:80/346246215'
-alias radiocpd='mplayer http://relay.broadcastify.com:80/il_chicago_police2'
-alias radionypd='mplayer http://relay.broadcastify.com:80/838989288'
-alias radiobazarnaom='mplayer http://str20.creacast.com/bazarnaom'
-alias radioma3ak='mplayer http://www.radioma3ak.com:8000/'
-alias radiodeepspaceone='mpg123 -vC http://ice.somafm.com/deepspaceone'
-alias radiosecretagent='mpg123 -vC http://ice.somafm.com/secretagent'
-alias radiospacestation='mpg123 -vC http://ice.somafm.com/spacestation'
-alias radiodoomed='mpg123 -vC http://ice.somafm.com/doomed'
-alias radiodefcon='mpg123 -vC http://xstream1.somafm.com:6200'
-alias radiogoa='mpg123 -vC http://ice.somafm.com/suburbsofgoa'
-alias radiosf1033='mpg123 -vC http://ice.somafm.com/sf1033'
-alias radio7soul='mpg123 -vC http://dcstream1.somafm.com:7770'
-alias radiocristal='mpg123 -vC http://95.81.146.6/4123/radio_cristal_hd.mp3'
-alias radiodubstep='mpg123 -vC http://ice.somafm.com/dubstep'
-alias radiomissioncontrol='mpg123 -vC http://ice.somafm.com/missioncontrol'
-alias radionpr="mpg123 -vC http://nprdmp.ic.llnwd.net/stream/nprdmp_live01_mp3"
-alias radiovenus="mpg123 -vC http://radiovenus.ice.infomaniak.ch/radiovenus-128.mp3"
-
 ## ┬─┐┬ ┐┌┐┐┌─┐┌┐┐o┌─┐┌┐┐┐─┐
 ## ├─ │ │││││   │ ││ ││││└─┐
 ## │  └─┘ └┘└─┘ │ │┘─┘ └┘──┘
@@ -195,6 +161,9 @@ emacs-kill(){ emacsclient --e "(progn (setq kill-emacs-hook \'nil) (kill-emacs))
 # USE BASH-COMPLETION, IF AVAILABLE
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
     . /usr/share/bash-completion/bash_completion
+
+# SOURCE
+source ~/.radio
 
 # BLOCK CURSOR
 echo -e '\033[?6c'

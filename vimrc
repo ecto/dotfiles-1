@@ -45,6 +45,29 @@ syntax off                       " syntax highlighting
 set background=dark              " dark color
 filetype off
 
+"" ┐─┐┌┐┐o┬─┐┬─┐┬─┐┌┐┐┐─┐
+"" └─┐│││││─┘│─┘├─  │ └─┐
+"" ──┘ └┘││  │  ┴─┘ │ ──┘
+"""""""""""""""" SNIPPETS
+
+" Tab completion in insert mode: VERY nice.
+" See ":help completion"; this function was copied from there. It makes
+" the Tab key act normally if there's only whitespace to the left of it,
+" but it does "tab completion" if there's anything else to the left.
+" This is a very "DWIW" (Do What I Want) kind of thing :)
+" Note that you can't insert a Tab in the middle of a line by pressing
+" Tab any more, but you can by pressing <C-V><Tab>.
+function! CleverTab()
+   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+      return "\<Tab>"
+   else
+      return "\<C-N>"
+endfunction
+inoremap <Tab> <C-R>=CleverTab()<CR>
+
+" With this Tab option, use a dictionnary
+" set complete=.,w,b,u,t,i,k~/.vim/dictionary
+
 "" ┌─┐┌─┐┬  ┌─┐┬─┐┐─┐┌─┐┬ ┬┬─┐┌┌┐┬─┐
 "" │  │ ││  │ ││┬┘└─┐│  │─┤├─ │││├─ 
 "" └─┘┘─┘└─┘┘─┘│└┘──┘└─┘│ ┴┴─┘┘ │┴─┘

@@ -113,7 +113,7 @@ alias playchess='xboard -fcp "gnuchess depth 1 --easy --xboard" -boardSize Slim 
 alias playcrafty='xboard -fcp "crafty xboard sd=4 sn=100000 ponder=off book=off"'
 alias playfisc='xboard -ics -icshost freechess.org'
 alias doom='chocolate-doom -nomusic -iwad ~/m/IWADs/DOOM/DOOM.WAD'
-alias alientc='chocolate-doom -nomusic -iwad ~/m/IWADs/DOOM/DOOM.WAD -deh ~/m/IWADs/DOOM/ALIENTC/atcud19.deh -merge ~/m/IWADs/DOOM/ALIENTC/alitcsf.wad -file ~/m/IWADs/DOOM/ALIENTC/alitcsnd.wad ~/m/IWADs/DOOM/ALIENTC/alitcwad.wad'
+alias alientc='chocolate-doom -nomusic -iwad ~/m/IWADs/DOOM/DOOM.WAD -deh ~/m/IWADs/DOOM/ALIENTC/ATCUD19.DEH -merge ~/m/IWADs/DOOM/ALIENTC/ALITCSF.WAD -file ~/m/IWADs/DOOM/ALIENTC/ALITCSND.WAD ~/m/IWADs/DOOM/ALIENTC/ALITCWAD.WAD'
 alias doomlep='chocolate-doom -nomusic -iwad ~/m/IWADs/DOOM/DOOM.WAD -file ~/m/IWADs/DOOM/DOOMLEP/JPTR_V40.WAD'
 alias uac_dead='chocolate-doom -nomusic -iwad ~/m/IWADs/DOOM/DOOM.WAD -file ~/m/IWADs/DOOM/UAC_DEAD/UAC_DEAD.WAD -gameversion 1.9 -warp 1 8'
 alias doom2='chocolate-doom -no-music -iwad ~/m/IWADs/DOOM2/DOOM2.WAD'

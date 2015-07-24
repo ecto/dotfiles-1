@@ -21,8 +21,7 @@
              hidden-mode-line-mode)
     (run-with-idle-timer
      0 nil 'message
-     (concat "Hidden Mode Line Mode enabled.  "
-             "Use M-x hidden-mode-line-mode to make the mode-line appear."))))
+     (concat "Hidden Mode Line Mode enabled."))))
 
 ;; If you want to hide the mode-line in every buffer by default
 (add-hook 'after-change-major-mode-hook 'hidden-mode-line-mode)

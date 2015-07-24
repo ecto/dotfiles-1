@@ -26,3 +26,6 @@
 
 ;; If you want to hide the mode-line in every buffer by default
 (add-hook 'after-change-major-mode-hook 'hidden-mode-line-mode)
+
+;; KB
+(global-set-key (kbd "s-SPC") 'magit-status)

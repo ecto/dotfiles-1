@@ -27,4 +27,4 @@
 (add-hook 'after-change-major-mode-hook 'hidden-mode-line-mode)
 
 ;; KB
-(global-set-key (kbd "s-SPC") 'hidden-mode-line-mode)
+(global-set-key (kbd "C-s-SPC") 'hidden-mode-line-mode)

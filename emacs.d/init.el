@@ -37,36 +37,7 @@
 (setq-default indicate-empty-lines t
               indicate-buffer-boundaries (quote left))
 (setq initial-major-mode 'text-mode)
-(setq initial-scratch-message "\
-
-    .§§§§§§§§§§§. §§§§§§§§§§§§.      §§§§§§§§
-  ┌─§§§───────────§§§§─§§§§§§§§─§§§§─§§§§§§§§─┬───────────────────────┐
-  │ §§§ §§§§§§§§§ §§§§ §§§§§§§§ §§§§ §§§§§§§§ ├─ GNU Emacs 25.0.50.1 ─┤
-┌─┴─§§§─§§§§§§§§§─§§§§─§§§§§§§§─§§§§─§§§§§§§§─┼─ (i686-pc-linux-gnu) ─┤
-│   `§§§§§§§§§§§§      §§§§§§§§ `§§§§§§§§§§§§ ├─ 2o14-11-o6 on shyla ─┤
-│                                             └───────────────────────┴───┐
-├─ Welcome to GNU Emacs, one component of the GNU/Linux operating system ─┤
-├────-------------------------------------------------------------------──┘
-├─: Get help           C-h  (Hold down CTRL and press h)
-├─: Emacs manual       C-h r        Browse manuals     C-h i
-├─: Emacs tutorial     C-h t        Undo changes       C-x u
-├─: Buy manuals        C-h RET      Exit Emacs         C-x C-c
-├─: Activate menubar   M-`
-├─: (`C-' means use the CTRL key.  `M-' means use the Meta (or Alt) key.
-│
-├─: GNU Emacs comes with ABSOLUTELY NO WARRANTY; type C-h C-w for full details.
-├─: Emacs is Free Software--Free as in Freedom--so you can redistribute copies
-├─: of Emacs and modify it; type C-h C-c to see the conditions.
-├─: Type C-h C-o for information on getting the latest version.
-│
-├─: If an Emacs session crashed recently, type Meta-x recover-session RET
-├─: to recover the files you were editing.
-├───-------------------------------------------------------------------──┐
-├─ tHIS bUFFER iS fOR nOTES yOU dON'T wANT tO sAVE aND fOR rANDOM eVALS ─┤
-├─ iF yOU wANT tO cREATE a pHILE, jUST vISIT tHAT pHILE wITH C-x C-f ─┬──┘
-├─ tHEN eNTER tHE tEXT iN tHAT pHILE'S oWN bUFFER ─┬───────────────┬──┘
-└──────────────────────────────────────────────────┘  *scratch*  «─┘
-\n")
+(setq initial-scratch-message "")
 (load-theme 'vt100 t)
 
 ;; ┌─┐┌─┐┬─┐┬─┐

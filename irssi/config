@@ -123,7 +123,6 @@ aliases = {
   GOTO = "sb goto";
   CHAT = "dcc chat";
   RUN = "SCRIPT LOAD";
-  HIDEADD = "eval set activity_hide_targets $activity_hide_targets $C"
   UPTIME = "eval exec - expr `date +%s` - \\$F | awk '{print \"Irssi uptime: \"int(\\\\\\$1/3600/24)\"d \"int(\\\\\\$1/3600%24)\"h \"int(\\\\\\$1/60%60)\"m \"int(\\\\\\$1%60)\"s\" }'";
   CALC = "exec - if which bc &>/dev/null\\; then echo '$*' | bc | awk '{print \"$*=\"$$1}'\\; else echo bc was not found\\; fi";
   SBAR = "STATUSBAR";
@@ -148,6 +147,8 @@ aliases = {
   ubquiet = ":msg uBOTu-fr !ch quiet $C";
   ubunquiet = ":msg uBOTu-fr !ch unquiet $C";
   fpart = "quote remove $C";
+  hideadd = "eval set activity_hide_targets $activity_hide_targets $C";
+  hideset = "set activity_hide_targets $-";
 };
 
 ## ┐─┐┌┐┐┬─┐┌┐┐┬ ┐┐─┐┬─┐┬─┐┬─┐
@@ -319,7 +320,7 @@ settings = {
     timestamps = "yes";
     autolog_path = "~/x/Logs/$tag_$winref.log";
     hilight_act_color = "%8";
-    activity_msg_level = "PUBLIC";
+    activity_msg_level = "";
     activity_hide_level = "JOINS PARTS QUITS NICKS MODES KICKS TOPICS";
     awaylog_colors = "no";
     hide_colors = "yes";
@@ -330,6 +331,7 @@ settings = {
     activity_hilight_level = "HILIGHT MSGS DCCMSGS";
     bell_beeps = "no";
     beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
+    activity_hide_targets = "#25-35ans #Rencontres #Dialogues #ubuntu ##slackware #emacs #NetHack #laquadrature #test #nanowrimo_france #ubuntu-fr #ubuntu-fr-offtopic #debian-fr #debian";
   };
   "irc/core" = {
     join_auto_chans_on_invite = "no";
@@ -376,9 +378,7 @@ settings = {
 ## │ ┴│└─┘│└─┘│ ┴ │ ──┘
 ############## HILIGHTS
 
-hilights = (
-  { text = "f6k"; nick = "yes"; word = "yes"; }
-);
+hilights = ( { text = "f6k"; nick = "yes"; word = "yes"; } );
 
 ## ┌┌┐o┐─┐┌─┐┬─┐┬  ┬  ┬─┐┌┐┐┬─┐┌─┐┬ ┐┐─┐
 ## ││││└─┐│  ├─ │  │  │─┤│││├─ │ ││ │└─┐
@@ -387,3 +387,4 @@ hilights = (
 
 ignores = ( );
 keyboard = ( );
+logs = { };

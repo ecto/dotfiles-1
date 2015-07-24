@@ -209,16 +209,21 @@ abstracts = {
 
   # default background for all statusbars. You can also give
   # the default foreground color for statusbar items.
-  sb_background = "%n"; # %8
+  sb_background = "%n";
+  # %8
 
   # default backround for "default" statusbar group
-  sb_default_bg = "%n"; # %8
+  sb_default_bg = "%n";
+  # %8
   # background for prompt / input line
-  sb_prompt_bg = "%n"; # %8
+  sb_prompt_bg = "%n";
+  # %8
   # background for info statusbar
-  sb_info_bg = "%n"; # %8
+  sb_info_bg = "%n";
+  # %8
   # background for topicbar (same default)
-  sb_topic_bg = "%n"; # %8
+  sb_topic_bg = "%n";
+  # %8
 
   # text at the beginning of statusbars. sb-item already puts
   # space there, so we don't use anything by default.
@@ -227,9 +232,11 @@ abstracts = {
   # used for anything.
   sbend = "────────────────────────────────────────────────────────────────────────────────";
 
-  prompt = "%n>%n "; # %8>%n
+  prompt = "%n>%n ";
+  # %8>%n
 
-  sb = "%n$*/%n"; # %8>%n
+  sb = "%n$*/%n";
+  # %8>%n
   sbmode = "";
   sbaway = "/away";
   sbservertag = "$0";

@@ -33,6 +33,7 @@ alias radiobazarnaom='mplayer http://str20.creacast.com/bazarnaom'
 alias radioma3ak='mplayer http://www.radioma3ak.com:8000/'
 alias radiovenus="mpg123 -vC http://radiovenus.ice.infomaniak.ch/radiovenus-128.mp3"
 alias radio1940="mpg123 -vC http://149.255.59.162:8062/"
+alias radiolounge="mpg123 -Cv http://178.32.167.206:80"
 
 ## ┐─┐┌─┐┌┌┐┬─┐┬─┐┌┌┐
 ## └─┐│ │││││─┤├─ │││

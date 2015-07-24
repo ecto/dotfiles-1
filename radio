@@ -60,4 +60,5 @@ alias radiospvm='mpg123 --no-icy-meta -vC http://relay.broadcastify.com:80/79646
 alias radiolapd='mplayer http://relay.broadcastify.com:80/346246215'
 alias radiocpd='mplayer http://relay.broadcastify.com:80/il_chicago_police2'
 alias radionypd='mplayer http://relay.broadcastify.com:80/838989288'
+alias radiopp='mpg123 -Cv --no-icy-meta http://relay.broadcastify.com:80/17536054'
 

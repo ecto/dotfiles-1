@@ -237,4 +237,4 @@ alias journaux_biggie exec ratpoison -c "echo $(rsstail -1Np -u http://biggie.ek
 ################# AT START
 
 banish
-exec ~/g/scripts/rpws init 3 -k
+exec ~/g/scripts/rpws.pl init 3 -k

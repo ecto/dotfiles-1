@@ -2,7 +2,7 @@ http://www.0x0ff.info/feed/|0x0ff.info|Geek|
 http://scinfolex.com/feed/||Droit|
 http://lesactualitesdudroit.20minutes-blogs.fr/index.rss||Droit|
 http://www.alorsvoila.com/feed||Misc|
-http://feeds.feedburner.com/blogspot/yAukf||Books|xsltproc /home/f6k/e/atom2rss -
+http://feeds.feedburner.com/blogspot/yAukf||Books|xsltproc /home/f6k/g/scripts/atom2rss -
 http://www.assemblee-nationale.fr/rss/rss_presse.xml|Assemblée nationale - Communiqués de presse|Droit|
 http://www.assemblee-nationale.fr/rss/rss_cri.xml|Assemblée nationale - Comptes rendus intégraux des débats|Droit|
 http://www.assemblee-nationale.fr/rss/rss.xml|Assemblée nationale - Publications parlementaires|Droit|
@@ -25,11 +25,11 @@ http://feeds.feedburner.com/contrelacour||Droit|
 http://www.courrierinternational.com/feed/all/rss.xml||News|
 http://curia.europa.eu/jcms/rss.jsp?lang=fr|Curia Europa (FR)|Droit|
 http://radiofrance-podcast.net/podcast09/rss_13952.xml||Droit|
-http://framablog.org/feed/||Geek|xsltproc /home/f6k/e/atom2rss -
+http://framablog.org/feed/||Geek|xsltproc /home/f6k/g/scripts/atom2rss -
 http://geekographie.maieul.net/spip.php?page=backend||Geek|
-http://feeds.feedburner.com/GotEmacs||Emacs|xsltproc /home/f6k/e/atom2rss -
+http://feeds.feedburner.com/GotEmacs||Emacs|xsltproc /home/f6k/g/scripts/atom2rss -
 http://lejuriporter.unblog.fr/feed/||Droit|
-http://www.maitre-eolas.fr/feed/atom||Droit|xsltproc /home/f6k/e/atom2rss -
+http://www.maitre-eolas.fr/feed/atom||Droit|xsltproc /home/f6k/g/scripts/atom2rss -
 http://www.juritravail.com/news.xml||Droit|
 http://kiwichou.wordpress.com/feed/||Misc|
 http://www.klaire.fr/feed/||Misc|
@@ -47,8 +47,8 @@ http://www.dalloz-actualite.fr/actualites/feed.xml||Droit|
 http://libertescheries.blogspot.com/feeds/posts/default?alt=rss||Droit|
 http://libre-ouvert.toile-libre.org/feed.php?rss||Geek|
 http://sebsauvage.net/links/?do=rss||Geek|
-http://linuxfr.org/news.atom||Geek|xsltproc /home/f6k/e/atom2rss -
-http://linuxfr.org/journaux.atom||Geek|xsltproc /home/f6k/e/atom2rss -
+http://linuxfr.org/news.atom||Geek|xsltproc /home/f6k/g/scripts/atom2rss -
+http://linuxfr.org/journaux.atom||Geek|xsltproc /home/f6k/g/scripts/atom2rss -
 http://www.madmoizelle.com/feed||Misc|
 http://thelawwestofealingbroadway.blogspot.com/feeds/posts/default?alt=rss||Droit|
 http://magistratesblog.blogspot.com/feeds/posts/default?alt=rss||Droit|
@@ -62,7 +62,7 @@ http://www.europarl.europa.eu/rss/doc/texts-adopted/fr.xml|Parlement européen -
 http://passeurdesciences.blog.lemonde.fr/feed/||Misc|
 http://grumeautique.blogspot.com/feeds/posts/default?alt=rss||Misc|
 http://feeds.feedburner.com/Pixellibre||Geek|
-http://planet.emacsen.org/atom.xml||Emacs|xsltproc /home/f6k/e/atom2rss -
+http://planet.emacsen.org/atom.xml||Emacs|xsltproc /home/f6k/g/scripts/atom2rss -
 http://www.planet-libre.org/feed.php?type=rss|Planet Libre|Geek|
 http://planete-sf.org/feed.php?type=rss||Books|
 http://ploum.net/feed/||Misc|
@@ -72,13 +72,13 @@ http://feeds.wnyc.org/radiolab||Misc|
 http://reflets.info/feed/||News|
 http://romainelubrique.org/spip.php?page=backend||Misc|
 http://rsfblog.fr/feed/||Books|
-http://feeds.feedburner.com/sfadj||Misc|xsltproc /home/f6k/e/atom2rss -
+http://feeds.feedburner.com/sfadj||Misc|xsltproc /home/f6k/g/scripts/atom2rss -
 http://river.hoa.ro/api/latest?format=rss||Geek|
-http://standblog.org/blog/feed/atom||Misc|xsltproc /home/f6k/e/atom2rss -
-http://feeds.feedburner.com/tedblog||Geek|xsltproc /home/f6k/e/atom2rss -
+http://standblog.org/blog/feed/atom||Misc|xsltproc /home/f6k/g/scripts/atom2rss -
+http://feeds.feedburner.com/tedblog||Geek|xsltproc /home/f6k/g/scripts/atom2rss -
 http://feeds.feedburner.com/tedtalks_video||Geek|
 http://tut-tuuut.github.io/rss.xml||Geek|
 http://unmug.tumblr.com/rss||Misc|
 http://unlimited-passion-books.blogspot.com/feeds/posts/default?alt=rss||Books|
-http://ergoemacs.org/emacs/blog.xml||Emacs|xsltproc /home/f6k/e/atom2rss -
-http://zythom.blogspot.com/feeds/posts/default||Geek|xsltproc /home/f6k/e/atom2rss -
+http://ergoemacs.org/emacs/blog.xml||Emacs|xsltproc /home/f6k/g/scripts/atom2rss -
+http://zythom.blogspot.com/feeds/posts/default||Geek|xsltproc /home/f6k/g/scripts/atom2rss -

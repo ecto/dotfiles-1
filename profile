@@ -7,7 +7,7 @@
 ########## PATH
 
 # GENERAL
-PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/local/games:/usr/games:/usr/sbin:/sbin:$HOME/e/
+PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/local/games:/usr/games:/usr/sbin:/sbin:$HOME/g/scripts:$HOME/x/scripts
 MANPATH=$MANPATH:/usr/local/share/man/
 # TEXLIVE
 PATH=/usr/local/texlive/2012/bin/i386-linux:$PATH; export PATH
@@ -81,8 +81,6 @@ alias zless='zless -z-2 -XPM".?ltlines %lt-%lb?L/%L. .byte %bB?s/%s. ?e(END) :?p
 alias most='most -C'
 alias more='more -d'
 alias filelisting='figlet -f computer "file listing" | sed '1d' > \[0000\]_file_listing.txt && ls -1si >> ls-i.txt'
-alias logmess='sudo tail -f /var/log/messages /var/log/vsftpd.log /usr/local/nginx/logs/access.log /usr/local/nginx/logs/error.log /home/illovae/.mpdscribble/mpdscribble.log /var/log/icecast2/access.log'
-#alias mutt='mutt -y'
 alias grep='grep --color=none'
 alias egrep='egrep --color=none'
 alias rezo='sudo watch netstat -alpe --ip'

@@ -497,7 +497,7 @@ regexp in `sml/prefix-regexp'."
 (defface sml/read-only
   '((t
      :inherit sml/global
-     :foreground "#d73737"
+     :foreground "#fcefba"
      ))
   ""
   :group 'smart-mode-line-faces)
@@ -505,7 +505,7 @@ regexp in `sml/prefix-regexp'."
 (defface sml/outside-modified
   '((t
      :inherit sml/global
-     :foreground "#d73737"
+     :foreground "#fcefba"
      ))
   ""
   :group 'smart-mode-line-faces)

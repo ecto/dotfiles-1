@@ -24,7 +24,7 @@ fi
 ###################### BACKGROUND
 
 #xsetroot -mod 8 8 -bg black -fg gray10
-#wpsetters=feh fbsetbg -t ~/.wallpaper.png
+wpsetters=feh fbsetbg -t ~/.wallpaper.png
 
 ## ┬ ┬o┬─┐┬─┐  ┌┌┐┐ ┬  ┌┌┐┌─┐┬ ┐┐─┐┬─┐
 ## │─┤││ │├─   │││└┌┘  ││││ ││ │└─┐├─ 

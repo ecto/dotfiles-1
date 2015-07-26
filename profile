@@ -68,6 +68,7 @@ alias urxvt_lblue='urxvt -bg "#264141"'
 alias urxvt_blue='urxvt -bg "#001b33"'
 alias urxvt_rblue='urxvt -bg "rgb:00/00/a8"'
 alias urxvt_green='urxvt -bg "#1C3623"'
+alias urxvt_red='urxvt -bg "#950000"'
 
 # OTHERS
 alias startx='startx -- -dpi 96 -nolisten tcp'

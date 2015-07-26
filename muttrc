@@ -48,9 +48,19 @@ set message_cachedir = ~/.mutt/cache/bodies
 set use_envelope_from = yes
 set send_charset="utf-8"
 set sort = threads
-set pager_index_lines=8
+set pager_index_lines = 8
+set pager_stop = yes
 set beep=no
 set beep_new=yes
+
+## ┌┌┐┬─┐┌─┐┬─┐┌─┐┐─┐
+## ││││─┤│  │┬┘│ │└─┐
+## ┘ │┘ │└─┘│└┘┘─┘──┘
+############## MACROS
+
+# Change PIL size
+macro pager "\ew" "<enter-command>set pager_index_lines=0<enter>"      
+macro pager "\ea" "<enter-command>set pager_index_lines=8<enter>"
 
 ## ┬┌ ┬─┐┐ ┬┬─┐o┌┐┐┬─┐o┌┐┐┌─┐┐─┐
 ## ├┴┐├─ └┌┘│─││││││ ││││││ ┬└─┐

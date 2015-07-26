@@ -58,7 +58,7 @@ set beep_new=yes
 ## ┘ │┘ │└─┘│└┘┘─┘──┘
 ############## MACROS
 
-# Change PIL size
+# Hide/restore threads pane by changing PIL size
 macro pager "\ew" "<enter-command>set pager_index_lines=0<enter>"      
 macro pager "\ea" "<enter-command>set pager_index_lines=8<enter>"
 

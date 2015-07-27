@@ -148,7 +148,7 @@ cd ()
 emacs-w3m(){ emacsclient -e "(w3m \"$@\")";}
 
 # KILL EMACS FROM CLI
-emacs-kill(){ emacsclient --e "(progn (setq kill-emacs-hook \'nil) (kill-emacs))";}
+emacs-kill(){ emacsclient --e "(progn (setq kill-emacs-hook 'nil) (kill-emacs))";}
 
 ## ┬ ┐┌┌┐┬─┐┐─┐┬┌ 
 ## │ │││││─┤└─┐├┴┐

@@ -62,8 +62,9 @@ conky
 ## └┴┘│ └┘┴─┘┘─┘└┴┘  ┘ │┘ │ └┘┘ │└─┘┴─┘│└┘
 ########################### WINDOW MANAGER
 
-#exec monsterwm
-exec larswm
+#exec 2bwm
+exec monsterwm
+#exec larswm
 #exec ratpoison
 #exec dwm
 #exec w9wm -grey -nostalgia

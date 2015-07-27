@@ -2,7 +2,7 @@
 ;; vt100-theme.el
 
 ;; CC-BY 4.0 FGK <f6k@opmbx.org>
-;; Last updated Time-stamp: <2015-07-15 18:56:24 (f6k)>
+;; Last updated Time-stamp: <2015-07-27 12:48:36 (f6k)>
 
 ;; vt100-theme.el is a dark monochrome theme for Emacs 24 based on the
 ;; monochrome theme by Xavier Noria <fxn@hashref.com> [copyright (C) 2011-2014]
@@ -54,6 +54,7 @@
 `(lazy-highlight ((,class (:foreground ,black :background ,lgray))))
 `(linum ((,class (:foreground ,white))))
 `(trailing-whitespace ((,class (:background "red"))))
+`(header-line ((,class (:background ,black :foreground ,white))))
 
 ;; ┌┌┐┌─┐┬─┐┬─┐  ┬  o┌┐┐┬─┐
 ;; ││││ ││ │├─   │  ││││├─ 

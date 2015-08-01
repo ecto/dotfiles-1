@@ -2,7 +2,7 @@
 ;; vt100-theme.el
 
 ;; CC-BY 4.0 FGK <f6k@opmbx.org>
-;; Last updated Time-stamp: <2015-07-27 12:48:36 (f6k)>
+;; Last updated Time-stamp: <2015-08-01 06:16:53 (f6k)>
 
 ;; vt100-theme.el is a dark monochrome theme for Emacs 24 based on the
 ;; monochrome theme by Xavier Noria <fxn@hashref.com> [copyright (C) 2011-2014]
@@ -28,13 +28,14 @@
 (let ((class '((class color) (min-colors 10)))
       (black "black")
       (white "#fcefba")
-      (lgray "light gray"))
+      (lgray "light gray")
+      (dgray "gray30"))
 
   (custom-theme-set-faces
    'vt100
 
 ;; ┬─┐┬─┐┐─┐o┌─┐
-;; │─││─┤└─┐││  
+;; │─││─┤└─┐││
 ;; ┴─┘┘ │──┘ └─┘
 ;;;;;;;;;; BASIC
 
@@ -57,7 +58,7 @@
 `(header-line ((,class (:background ,black :foreground ,white))))
 
 ;; ┌┌┐┌─┐┬─┐┬─┐  ┬  o┌┐┐┬─┐
-;; ││││ ││ │├─   │  ││││├─ 
+;; ││││ ││ │├─   │  ││││├─
 ;; ┘ │┘─┘┴─┘┴─┘  └─┘  └┘┴─┘
 ;;;;;;;;;;;;;;;;; MODE LINE
 
@@ -68,8 +69,8 @@
                                    :foreground ,white :weight light))))
 
 ;; ┬─┐┐─┐┌─┐┬─┐┬─┐┬─┐  ┬─┐┌┐┐┬─┐  ┬─┐┬─┐┌─┐┌┌┐┬─┐┌┐┐
-;; ├─ └─┐│  │─┤│─┘├─   │─┤││││ │  │─┘│┬┘│ │││││─┘ │ 
-;; ┴─┘──┘└─┘┘ ││  ┴─┘  ┘ │ └┘┴─┘  │  │└┘┘─┘┘ ││   │ 
+;; ├─ └─┐│  │─┤│─┘├─   │─┤││││ │  │─┘│┬┘│ │││││─┘ │
+;; ┴─┘──┘└─┘┘ ││  ┴─┘  ┘ │ └┘┴─┘  │  │└┘┘─┘┘ ││   │
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ESCAPE AND PROMPT
 
 `(minibuffer-prompt ((,class (:foreground ,white))))
@@ -78,7 +79,7 @@
 `(warning ((,class (:foreground "yellow"))))
 `(success ((,class (:foreground "green"))))
 
-;; ┬─┐┌─┐┌┐┐┌┐┐  ┬  ┌─┐┌─┐┬┌ 
+;; ┬─┐┌─┐┌┐┐┌┐┐  ┬  ┌─┐┌─┐┬┌
 ;; ├─ │ ││││ │   │  │ ││  ├┴┐
 ;; │  ┘─┘ └┘ │   └─┘┘─┘└─┘│ ┘
 ;;;;;;;;;;;;;;;;;;; FONT LOCK
@@ -93,7 +94,7 @@
 `(font-lock-variable-name-face ((,class (:weight bold :foreground ,white))))
 `(font-lock-warning-face ((,class (:foreground ,white))))
 
-;; ┬─┐┬ ┐┌┐┐┌┐┐┌─┐┌┐┐  ┬─┐┌┐┐┬─┐  ┬  o┌┐┐┬┌ 
+;; ┬─┐┬ ┐┌┐┐┌┐┐┌─┐┌┐┐  ┬─┐┌┐┐┬─┐  ┬  o┌┐┐┬┌
 ;; │─││ │ │  │ │ ││││  │─┤││││ │  │  ││││├┴┐
 ;; ┴─┘└─┘ │  │ ┘─┘ └┘  ┘ │ └┘┴─┘  └─┘  └┘│ ┘
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;; BUTTON AND LINK
@@ -110,12 +111,18 @@
 `(show-paren-mismatch ((t (:background "red"))))
 
 ;; ┐ ┬┬ ┬o┌┐┐┬─┐┐─┐┬─┐┬─┐┌─┐┬─┐  ┌┌┐┌─┐┬─┐┬─┐
-;; ││││─┤│ │ ├─ └─┐│─┘│─┤│  ├─ ──││││ ││ │├─ 
+;; ││││─┤│ │ ├─ └─┐│─┘│─┤│  ├─ ──││││ ││ │├─
 ;; └┴┘│ ┴  │ ┴─┘──┘│  ┘ │└─┘┴─┘  ┘ │┘─┘┴─┘┴─┘
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; WHITESPACE-MODE
 
 `(whitespace-empty ((,class (:background unspecified :foreground "red"))))
-`(whitespace-line ((,class (:background ,lgray :foreground ,black))))
+`(whitespace-line ((,class (:background ,black :foreground ,white))))
+`(whitespace-space ((,class (:background ,black :foreground ,dgray))))
+`(whitespace-newline ((,class (:background ,black :foreground ,dgray))))
+`(whitespace-trailing ((,class (:background ,black :foreground "red"))))
+`(whitespace-identation ((, class (:background ,black :foreground ,dgray))))
+`(whitespace-space-after-tab ((, class (:background ,black
+                                                    :foreground ,dgray))))
 
 ;; ┐─┐┬─┐┬─┐┬─┐┬─┐┬─┐┬─┐┬─┐
 ;; └─┐│─┘├─ ├─ │ ││─││─┤│┬┘
@@ -139,9 +146,11 @@
 `(ruler-mode-column-number ((t (:inherit ruler-mode-default
                                          :foreground ,white))))
 `(ruler-mode-current-column ((t (:inherit default :weight bold))))
+`(ruler-mode-fill-column ((t (:inherit default :weight bold))))
+`(ruler-mode-comment-column ((t (:inherit default :weight bold))))
 
 ;; ┬─┐┌─┐o┬─┐┌─┐
-;; │┬┘│  ││┬┘│  
+;; │┬┘│  ││┬┘│
 ;; │└┘└─┘ │└┘└─┘
 ;;;;;;;;;; RCIRC
 
@@ -194,7 +203,7 @@
 `(gnus-summary-select ((,class (:foreground ,white))))
 
 ;; ┌┌┐┬─┐┐─┐┐─┐┬─┐┌─┐┬─┐
-;; │││├─ └─┐└─┐│─┤│ ┬├─ 
+;; │││├─ └─┐└─┐│─┤│ ┬├─
 ;; ┘ │┴─┘──┘──┘┘ │└─┘┴─┘
 ;;;;;;;;;;;;;;;; MESSAGE
 
@@ -206,8 +215,8 @@
 `(message-cited-text ((,class (:slant italic :foreground ,white))))
 `(message-separator ((,class (:weight bold :foreground ,white))))
 
-;; ┬─┐┐─┐┬ ┬┬─┐┬  ┬  
-;; ├─ └─┐│─┤├─ │  │  
+;; ┬─┐┐─┐┬ ┬┬─┐┬  ┬
+;; ├─ └─┐│─┤├─ │  │
 ;; ┴─┘──┘│ ┴┴─┘└─┘└─┘
 ;;;;;;;;;;;;;; ESHELL
 
@@ -224,7 +233,7 @@
 `(eshell-ls-symlink ((,class (:inherit eshell-ls-unreadable))))
 
 ;; ┌─┐┬─┐┌─┐  ┌┌┐┌─┐┬─┐┬─┐
-;; │ ││┬┘│ ┬──││││ ││ │├─ 
+;; │ ││┬┘│ ┬──││││ ││ │├─
 ;; ┘─┘│└┘└─┘  ┘ │┘─┘┴─┘┴─┘
 ;;;;;;;;;;;;;;;;; ORG-MODE
 
@@ -239,8 +248,8 @@
 `(org-done ((t (:bold t :foreground ,white :underline t))))
 `(org-document-title ((t (:foreground "light gray" :weight bold))))
 
-;; ┬─┐┬  ┐ ┬┐─┐┬─┐┬─┐┬  ┬  
-;; ├─ │  └┌┘└─┐│─┘├─ │  │  
+;; ┬─┐┬  ┐ ┬┐─┐┬─┐┬─┐┬  ┬
+;; ├─ │  └┌┘└─┐│─┘├─ │  │
 ;; │  └─┘ │ ──┘│  ┴─┘└─┘└─┘
 ;;;;;;;;;;;;;;;;;; FLYSPELL
 

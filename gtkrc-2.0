@@ -1,0 +1,20 @@
+################################################################################
+## ~/.gtkrc-2.0
+
+style "default" {
+  bg[NORMAL] = "#000000"
+  fg[NORMAL] = "#fcefba"
+}
+
+style "user-font" {
+        font_name = "Monospace 9"
+}
+
+class "GtkWidget" style "default"
+
+widget_class "*.GtkCList.GtkButton*" style "clistbutton"
+widget_class "*.GtkCTree.GtkButton*" style "clistbutton"
+
+widget_class "*" style "user-font"
+gtk-font-name="Monospace 9"
+

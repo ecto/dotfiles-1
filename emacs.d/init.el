@@ -99,9 +99,9 @@
 (package-initialize)
 
 ;; Check if all the packages I need are present. If not refresh and them.
-(setq my-package-list '(auctex auto-capitalize auto-complete dash golden-ratio
-                               markdown-mode popup with-editor))
-(mapc #'package-install my-package-list)
+;; (setq my-package-list '(auctex auto-capitalize auto-complete dash golden-ratio
+;;                                markdown-mode popup with-editor))
+;; (mapc #'package-install my-package-list)
 
 (when (not package-archive-contents)
   (package-refresh-contents))
@@ -275,14 +275,14 @@
      (reftex-mode 1)
      (abbrev-mode 1)
  ))
-;; user pdf reader to view pdf files
+;; ;; user pdf reader to view pdf files
 (setq TeX-view-program-list '(("zathura" "zathura %o")))
 (setq TeX-view-program-selection '((output-pdf "zathura")))
 ;; add C-h to C-c C-f (TeX-font-list) for hl{} (from csquotes.sty)
-(add-to-list 'LaTeX-font-list '(?\C-h "\\hl{" "}"))
-;;(add-to-list 'TeX-font-list '(?h "\\hl{" "}"))
-;; integrate RefTeX with AUCTeX
-(setq reftex-plug-into-AUCTeX t)
+;; (add-to-list 'LaTeX-font-list '(?\C-h "\\hl{" "}"))
+(add-to-list 'TeX-font-list '(?h "\\hl{" "}"))
+;; ;; integrate RefTeX with AUCTeX
+;; (setq reftex-plug-into-AUCTeX t)
 
 ;; ┐─┐┌┌┐┬  
 ;; └─┐││││  
@@ -408,3 +408,17 @@
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 ;; magit-status
 (global-set-key (kbd "C-c C-g") 'magit-status)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (auctex with-editor visual-fill-column markdown-mode golden-ratio auto-complete auto-capitalize))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

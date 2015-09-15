@@ -165,6 +165,16 @@
     (when file
       (find-file file))))
 
+;; ┌─┐┬─┐┌─┐┌┌┐┌─┐┬─┐┬─┐
+;; │ ││┬┘│ ┬││││ ││ │├─ 
+;; ┘─┘│└┘└─┘┘ │┘─┘┴─┘┴─┘
+;;;;;;;;;;;;;;;; ORGMODE
+
+(add-to-list 'auto-mode-alist '("TODO" . org-mode))
+(setq org-todo-keywords '((sequence "TODO" "CANC" "WAIT" "DONE")))
+(setq org-agenda-files (list "~/x/Droit/L2-ter/edt/emploi-du-temps-S3.org"
+                             "~/x/Droit/L2-ter/TODO"))
+
 ;; o┬─┐┬ ┐┬─┐┬─┐┬─┐┬─┐
 ;; ││─││ │├─ ├─ ├─ │┬┘
 ;; │┴─┘└─┘│  │  ┴─┘│└┘
@@ -408,6 +418,17 @@
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 ;; magit-status
 (global-set-key (kbd "C-c C-g") 'magit-status)
+;; org-mode
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+;; (global-set-key "\C-cb" 'org-iswitchb)
+
+;; ┌─┐┬ ┐┐─┐┌┐┐┌─┐┌┌┐  ┐ ┬┬─┐┬─┐
+;; │  │ │└─┐ │ │ ││││──│┌┘│─┤│┬┘
+;; └─┘└─┘──┘ │ ┘─┘┘ │  └┘ ┘ ││└┘
+;;;;;;;;;;;;;;;;;;;;; CUSTOM-VAR
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

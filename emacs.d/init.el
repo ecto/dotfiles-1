@@ -171,7 +171,7 @@
 ;;;;;;;;;;;;;;;; ORGMODE
 
 (add-to-list 'auto-mode-alist '("TODO" . org-mode))
-(setq org-todo-keywords '((sequence "TODO" "CANC" "WAIT" "DONE")))
+(setq org-todo-keywords '((sequence "TODO" "APPT" "WAIT" "|" "DONE" "CANC")))
 (setq org-agenda-files (list "~/x/Droit/L2-ter/edt/emploi-du-temps-S3.org"
                              "~/x/Droit/L2-ter/TODO"))
 
@@ -264,6 +264,23 @@
 ;; switch
 (setq dired-listing-switches "-alF")
 (setq dired-ls-F-marks-symlinks t)
+
+;; ┌─┐┬─┐┬  ┬─┐┌┐┐┬─┐┬─┐┬─┐
+;; │  │─┤│  ├─ ││││ ││─┤│┬┘
+;; └─┘┘ │└─┘┴─┘ └┘┴─┘┘ ││└┘
+;;;;;;;;;;;;;;;;;; CALENDAR
+
+(require 'french-holidays)
+(setq calendar-holidays holiday-french-holidays)
+(add-hook 'calendar-load-hook
+              (lambda ()
+                (calendar-set-date-style 'european)))
+(setq calendar-week-start-day 1
+          calendar-day-name-array ["Dimanche" "Lundi" "Mardi" "Mercredi"
+                                   "Jeudi" "Vendredi" "Samedi"]
+          calendar-month-name-array ["Janvier" "Février" "Mars" "Avril" "Mai"
+                                     "Juin" "Juillet" "Août" "Septembre"
+                                        "Octobre" "Novembre" "Décembre"])
 
 ;; ┬  ┬─┐┌┐┐┬─┐┐ │
 ;; │  │─┤ │ ├─ ┌┼┘

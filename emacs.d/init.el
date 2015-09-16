@@ -171,6 +171,7 @@
 ;;;;;;;;;;;;;;;; ORGMODE
 
 (add-to-list 'auto-mode-alist '("TODO" . org-mode))
+(setq org-deadline-warning-days 200)
 (setq org-todo-keywords '((sequence "TODO" "APPT" "WAIT" "|" "DONE" "CANC")))
 (setq org-agenda-files (list "~/x/Droit/L2-ter/edt/emploi-du-temps-S3.org"
                              "~/x/Droit/L2-ter/TODO"))

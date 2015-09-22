@@ -2,7 +2,7 @@
 ;; vt100-theme.el
 
 ;; CC-BY 4.0 FGK <f6k@opmbx.org>
-;; Last updated Time-stamp: <2015-08-08 12:31:03 (f6k)>
+;; Last updated Time-stamp: <2015-09-22 16:56:23 (f6k)>
 
 ;; vt100-theme.el is a dark monochrome theme for Emacs 24 based on the
 ;; monochrome theme by Xavier Noria <fxn@hashref.com> [copyright (C) 2011-2014]
@@ -50,7 +50,7 @@
 `(fringe ((,class (:foreground ,white :background ,black))))
 `(highlight ((,class (:foreground ,black :background ,white))))
 `(region ((,class (:foreground ,black :background ,white))))
-`(secondary-selection ((,class (:foreground: ,black :background ,lgray))))
+`(secondary-selection ((,class (:foreground ,black :background ,lgray))))
 `(isearch ((,class (:foreground ,black :background ,white))))
 `(lazy-highlight ((,class (:foreground ,black :background ,lgray))))
 `(linum ((,class (:foreground ,white))))
@@ -76,7 +76,7 @@
 `(minibuffer-prompt ((,class (:foreground ,white))))
 `(escape-glyph ((,class (:foreground ,lgray))))
 `(error ((,class (:weight bold :slant italic :foreground "red"))))
-`(warning ((,class (:foreground "yellow"))))
+`(warning ((,class (:foreground "red"))))
 `(success ((,class (:foreground "green"))))
 
 ;; ┬─┐┌─┐┌┐┐┌┐┐  ┬  ┌─┐┌─┐┬┌
@@ -92,7 +92,7 @@
 `(font-lock-string-face ((,class (:foreground ,white))))
 `(font-lock-type-face ((,class (:foreground ,white))))
 `(font-lock-variable-name-face ((,class (:weight bold :foreground ,white))))
-`(font-lock-warning-face ((,class (:foreground ,white))))
+`(font-lock-warning-face ((,class (:foreground "red"))))
 
 ;; ┬─┐┬ ┐┌┐┐┌┐┐┌─┐┌┐┐  ┬─┐┌┐┐┬─┐  ┬  o┌┐┐┬┌
 ;; │─││ │ │  │ │ ││││  │─┤││││ │  │  ││││├┴┐
@@ -245,11 +245,21 @@
 `(org-level-6 ((t (:bold t :foreground ,white))))
 `(org-link ((t (:foreground ,white :underline t))))
 `(org-todo ((t (:bold t :foreground ,white :underline t))))
-`(org-done ((t (:bold t :foreground ,white :underline t))))
+`(org-done ((t (:foreground ,white))))
 `(org-document-title ((t (:foreground ,white :weight bold))))
 `(org-document-info-keyword ((t (:foreground ,white))))
 `(org-date ((t (:foreground ,white :underline t))))
 `(org-checkbox ((t (:foreground ,white))))
+`(org-scheduled ((t (:foreground ,white))))
+`(org-agenda-structure ((t (:foreground ,white))))
+`(org-agenda-date ((t (:foreground ,white))))
+`(org-agenda-date-today ((t (:foreground ,white :weight bold))))
+`(org-agenda-date-weekend ((t (:foreground ,white))))
+`(org-upcoming-deadline ((t (:foreground, white :slant italic))))
+`(org-time-grid ((t (:foreground ,white))))
+`(org-agenda-current-time ((t (:foreground ,white))))
+`(org-sexp-date ((t (:foreground ,white))))
+`(org-agenda-done ((t (:foreground ,white))))
 
 ;; ┬─┐┬  ┐ ┬┐─┐┬─┐┬─┐┬  ┬
 ;; ├─ │  └┌┘└─┐│─┘├─ │  │

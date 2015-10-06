@@ -2,7 +2,7 @@
 ;; vt100-theme.el
 
 ;; CC-BY 4.0 FGK <f6k@opmbx.org>
-;; Last updated Time-stamp: <2015-09-22 16:56:23 (f6k)>
+;; Last updated Time-stamp: <2015-10-06 09:25:12 (f6k)>
 
 ;; vt100-theme.el is a dark monochrome theme for Emacs 24 based on the
 ;; monochrome theme by Xavier Noria <fxn@hashref.com> [copyright (C) 2011-2014]
@@ -92,7 +92,7 @@
 `(font-lock-string-face ((,class (:foreground ,white))))
 `(font-lock-type-face ((,class (:foreground ,white))))
 `(font-lock-variable-name-face ((,class (:weight bold :foreground ,white))))
-`(font-lock-warning-face ((,class (:foreground "red"))))
+`(font-lock-warning-face ((,class (:foreground ,white))))
 
 ;; ┬─┐┬ ┐┌┐┐┌┐┐┌─┐┌┐┐  ┬─┐┌┐┐┬─┐  ┬  o┌┐┐┬┌
 ;; │─││ │ │  │ │ ││││  │─┤││││ │  │  ││││├┴┐

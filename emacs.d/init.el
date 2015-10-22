@@ -310,7 +310,8 @@
 (setq TeX-view-program-selection '((output-pdf "zathura")))
 ;; add C-h to C-c C-f (TeX-font-list) for hl{} (from csquotes.sty)
 ;; (add-to-list 'LaTeX-font-list '(?\C-h "\\hl{" "}"))
-(add-to-list 'TeX-font-list '(?h "\\hl{" "}"))
+;; (add-to-list 'TeX-font-list '(?h "\\hl{" "}"))
+(add-to-list 'TeX-font-list '(8 "\\hl{" "}"))
 ;; ;; integrate RefTeX with AUCTeX
 ;; (setq reftex-plug-into-AUCTeX t)
 

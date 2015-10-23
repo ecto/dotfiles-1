@@ -16,6 +16,8 @@ alias radiortl='mplayer -playlist http://radio.rtl.fr/rtl.pls'
 alias radiordi='mpg123 -vC http://RDIRADIO.akacast.akamaistream.net:80/7/501/177423/v1/rc.akacast.akamaistream.net/RDIRADIO'
 alias radiocanada='mpg123 --no-icy-meta -vC http://2QMTL0.akacast.akamaistream.net:80/7/953/177387/v1/rc.akacast.akamaistream.net/2QMTL0'
 alias radionpr="mpg123 -vC http://nprdmp-live01-mp3.akacast.akamaistream.net/7/998/364916/v1/npr.akacast.akamaistream.net/nprdmp_live01_mp3"
+alias radiowradio="mplayer http://7309.live.streamtheworld.com/W_RADIOAAC"
+alias radiomvs="mplayer http://7289.live.streamtheworld.com/XHMVSFM_SC"
 
 ## ┌┌┐┬ ┐┐─┐o┐─┐┬ ┐┬─┐
 ## ││││ │└─┐││ ││ │├─ 
@@ -34,6 +36,7 @@ alias radioma3ak='mplayer http://www.radioma3ak.com:8000/'
 alias radiovenus="mpg123 -vC http://radiovenus.ice.infomaniak.ch/radiovenus-128.mp3"
 alias radio1940="mpg123 -vC http://149.255.59.162:8062/"
 alias radiolounge="mpg123 -Cv http://178.32.167.206:80"
+alias radiowqxr="mpg123 -Cv http://stream.wqxr.org/wqxr"
 
 ## ┐─┐┌─┐┌┌┐┬─┐┬─┐┌┌┐
 ## └─┐│ │││││─┤├─ │││

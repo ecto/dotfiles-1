@@ -1,7 +1,7 @@
 ################################################################################
 ## ~/.ncmpcpp/keys
 
-key_enter = 10 'x'
+key_enter = 'x'
 key_stop = 'v'
 key_pause = 'c'
 key_next = 'b'
@@ -16,3 +16,5 @@ key_shuffle = 's'
 key_toggle_crossfade = 'X'
 key_set_crossfade = 0
 key_update_db = 'u'
+key_clear = 'C'
+key_crop = 'K'

@@ -1,0 +1,14 @@
+################################################################################
+## ~/.iftoprc (v1.0pre4)
+
+dns-resolution: yes
+port-resolution: yes
+filter-code: bpf
+show-bars: yes
+promiscuous: no
+port-display: on
+link-local: yes
+hide-source: no
+hide-destination: no
+use-bytes: yes
+line-display: one-line-both

@@ -84,7 +84,7 @@ mailboxes !
 ############ EDITOR
 
 set edit_hdrs
-set editor="emacsclient -c %s"
+set editor="vim"
 
 ## ┌┌┐o┐─┐┌─┐┬─┐┬  ┬  ┬─┐┌┐┐┬─┐┌─┐┬ ┐┐─┐
 ## ││││└─┐│  ├─ │  │  │─┤│││├─ │ ││ │└─┐

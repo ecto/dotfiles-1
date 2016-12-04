@@ -8,17 +8,17 @@
 
 servers = (
   {
-    address = "irc.freenode.net";
+    address = "chat.freenode.net";
     chatnet = "freenode";
-    port = "6667";
-    use_ssl = "no";
-    ssl_verify = "no";
+    port = "6697";
+    use_ssl = "yes";
+    autoconnect = "no";
   },
   {
-    address = "chat.facebook.com";
-    port = "5222";
-    use_ssl = "no";
-    chatnet = "facebook";
+    address = "irc.epiknet.net";
+    chatnet = "epiknet";
+    port = "7002";
+    use_ssl = "yes";
     autoconnect = "no";
   }
 );
@@ -29,40 +29,8 @@ servers = (
 ################## CHATNETS
 
 chatnets = {
-  IRCnet = {
-    type = "IRC";
-    max_kicks = "4";
-    max_msgs = "5";
-    max_whois = "4";
-    max_query_chans = "5";
-  };
-  EFNet = { 
-    type = "IRC";
-    max_kicks = "4";
-    max_msgs = "3";
-    max_whois = "1";
-  };
-  Undernet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  DALnet = {
-    type = "IRC";
-    max_kicks = "4";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  QuakeNet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  facebook = { type = "XMPP"; };
+  epiknet = { type = "IRC"; };
   SILC = { type = "SILC"; };
-  Ubuntu = { type = "IRC"; };
   freenode = { type = "IRC"; };
 };
 
@@ -72,11 +40,14 @@ chatnets = {
 ################## CHANNELS
 
 channels = (
-  { name = "#slackware"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#dud-t"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "##slackware"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#emacs"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#NetHack"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#raspberrypi"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#freenode"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#laquadrature"; chatnet = "freenode"; autojoin = "Yes"; },
-  { name = "#ubuntu-fr"; chatnet = "freenode"; autojoin = "Yes"; }
+  { name = "#nanowrimo_france"; chatnet = "epiknet"; autojoin = "Yes"; }
 );
 
 ## ┬─┐┬  o┬─┐┐─┐┬─┐┐─┐
@@ -331,7 +302,7 @@ settings = {
     activity_hilight_level = "HILIGHT MSGS DCCMSGS";
     bell_beeps = "no";
     beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
-    activity_hide_targets = "#25-35ans #Rencontres #Dialogues #ubuntu ##slackware #emacs #NetHack #laquadrature #test #nanowrimo_france #ubuntu-fr #ubuntu-fr-offtopic #debian-fr #debian";
+    activity_hide_targets = "#dud-t #freenode #25-35ans #Rencontres #Dialogues #ubuntu ##slackware #emacs #NetHack #laquadrature #test #nanowrimo_france #ubuntu-fr #ubuntu-fr-offtopic #debian-fr #debian #raspberrypi";
   };
   "irc/core" = {
     join_auto_chans_on_invite = "no";

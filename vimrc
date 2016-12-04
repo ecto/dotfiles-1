@@ -26,7 +26,7 @@ set tabstop=2                    " indentation every four columns
 set softtabstop=2                " backspace delete indent
 set nobackup                     " no backup files
 set ffs=unix,dos,mac             " all filformats
-"set wrap linebreak nolist        " soft wrap
+set wrap linebreak nolist        " soft wrap
 "set tw=78                        " hard wrap
 "set formatoptions+=t             " hard wrap
 
@@ -38,6 +38,8 @@ set ffs=unix,dos,mac             " all filformats
 
 set shortmess+=I                 " disable startup message
 set lazyredraw                   " stop unnecessary rendering
+set vb                           " visual bell
+set scrolloff=1                  " One visible lines before cursor
 set guioptions-=m                " remove menu bar
 set guioptions-=T                " remove toolbar
 set guioptions-=r                " remove right-hand scroll bar

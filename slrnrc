@@ -15,7 +15,7 @@ visible_headers "From:,Newsgroups:,Subject:,Date:,Followup-To:"
 
 set followup_strip_signature 0 % don't include sig in quoted text of followups
 
-set editor_command "emacsclient -c '%s' -a zile"
+set editor_command "vim"
 set mail_editor_command "mutt -H '%s'"
 set abort_unmodified_edits 1 % abord if nothing was modified in post/mail
 set non_Xbrowser "lynx '%s'"

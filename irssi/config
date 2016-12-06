@@ -324,7 +324,7 @@ settings = {
     activity_hilight_level = "HILIGHT MSGS DCCMSGS";
     bell_beeps = "no";
     beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
-    activity_hide_targets = "#dud-t #freenode #25-35ans #Rencontres #Dialogues #ubuntu ##slackware #emacs #NetHack #laquadrature #test #nanowrimo_france #ubuntu-fr #ubuntu-fr-offtopic #debian-fr #debian #raspberrypi #mexico #Colombia #terra_chat";
+    activity_hide_targets = "#dud-t #freenode #25-35ans #Rencontres #Dialogues #ubuntu ##slackware #emacs #NetHack #laquadrature ##linux ##security ##windows #test #nanowrimo_france #ubuntu-fr #ubuntu-fr-offtopic #debian-fr #debian #raspberrypi #mexico #Colombia #terra_chat";
     hide_text_style = "yes";
   };
   "irc/core" = {

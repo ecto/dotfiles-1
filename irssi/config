@@ -20,6 +20,13 @@ servers = (
     port = "7002";
     use_ssl = "yes";
     autoconnect = "no";
+  },
+  {
+    address = "irc.irc-hispano.org";
+    chatnet = "hispano";
+    port = "6667";
+    user_ssl = "no";
+    autoconnect = "no";
   }
 );
 
@@ -32,6 +39,7 @@ chatnets = {
   epiknet = { type = "IRC"; };
   SILC = { type = "SILC"; };
   freenode = { type = "IRC"; };
+  hispano = { type = "IRC"; };
 };
 
 ## ┌─┐┬ ┬┬─┐┌┐┐┌┐┐┬─┐┬  ┐─┐
@@ -47,7 +55,21 @@ channels = (
   { name = "#raspberrypi"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#freenode"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#laquadrature"; chatnet = "freenode"; autojoin = "Yes"; },
-  { name = "#nanowrimo_france"; chatnet = "epiknet"; autojoin = "Yes"; }
+  { name = "##linux"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "##security"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "##windows"; chatnet = "freenode"; autojoin = "Yes"; },
+  { 
+    name = "#nanowrimo_france";
+    chatnet = "epiknet";
+    autojoin = "Yes";
+  },
+  { name = "#Dialogues"; chatnet = "epiknet"; autojoin = "Yes"; },
+  { name = "#Rencontres"; chatnet = "epiknet"; autojoin = "Yes"; },
+  { name = "#25-35ans"; chatnet = "epiknet"; autojoin = "Yes"; },
+  { name = "#Colombia"; chatnet = "hispano"; autojoin = "Yes"; },
+  { name = "#mexico"; chatnet = "hispano"; autojoin = "Yes"; },
+  { name = "#terra_chat"; chatnet = "hispano"; autojoin = "Yes"; },
+
 );
 
 ## ┬─┐┬  o┬─┐┐─┐┬─┐┐─┐
@@ -285,7 +307,7 @@ settings = {
     autocreate_own_query = "yes";
     use_msgs_window = "yes";
     reuse_unused_windows = "yes";
-    autocreate_query_level = "MSGS DCCMSGS";
+    autocreate_query_level = "DCCMSGS";
     windows_auto_renumber = "yes";
     emphasis = "yes";
     timestamps = "yes";
@@ -302,7 +324,8 @@ settings = {
     activity_hilight_level = "HILIGHT MSGS DCCMSGS";
     bell_beeps = "no";
     beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
-    activity_hide_targets = "#dud-t #freenode #25-35ans #Rencontres #Dialogues #ubuntu ##slackware #emacs #NetHack #laquadrature #test #nanowrimo_france #ubuntu-fr #ubuntu-fr-offtopic #debian-fr #debian #raspberrypi";
+    activity_hide_targets = "#dud-t #freenode #25-35ans #Rencontres #Dialogues #ubuntu ##slackware #emacs #NetHack #laquadrature #test #nanowrimo_france #ubuntu-fr #ubuntu-fr-offtopic #debian-fr #debian #raspberrypi #mexico #Colombia #terra_chat";
+    hide_text_style = "yes";
   };
   "irc/core" = {
     join_auto_chans_on_invite = "no";

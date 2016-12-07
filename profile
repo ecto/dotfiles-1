@@ -19,7 +19,7 @@ INFOPATH=/usr/local/texlive/2012/texmf/doc/info:$INFOPATH; export INFOPATH
 ## │  │└┘┘─┘┘ ││   │ 
 ############## PROMPT
 
-PS1="\[\033[1;37m\]]\[\033[00m\]"
+PS1="]" # bold: "\[\033[1;37m\]]\[\033[00m\]"
 
 ## ┬─┐┐ │┬─┐┌─┐┬─┐┌┐┐┐─┐
 ## ├─ ┌┼┘│─┘│ ││┬┘ │ └─┐

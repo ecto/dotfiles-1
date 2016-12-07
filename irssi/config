@@ -28,6 +28,20 @@ servers = (
     user_ssl = "no";
     autoconnect = "no";
   }
+  {
+    address = "irc.otaku-irc.fr";
+    chatnet = "otaku";
+    port = "6667";
+    user_ssl = "no";
+    autoconnect = "no";
+  }
+  {
+    address = "irc.recycled-irc.net";
+    chatnet = "recycled";
+    port = "6667";
+    user_ssl = "no";
+    autoconnect = "no";
+  }
 );
 
 ## ┌─┐┬ ┬┬─┐┌┐┐┌┐┐┬─┐┌┐┐┐─┐
@@ -40,6 +54,8 @@ chatnets = {
   SILC = { type = "SILC"; };
   freenode = { type = "IRC"; };
   hispano = { type = "IRC"; };
+  otaku = { type = "IRC"; };
+  recycled = { type = "IRC"; };
 };
 
 ## ┌─┐┬ ┬┬─┐┌┐┐┌┐┐┬─┐┬  ┐─┐
@@ -69,7 +85,10 @@ channels = (
   { name = "#Colombia"; chatnet = "hispano"; autojoin = "Yes"; },
   { name = "#mexico"; chatnet = "hispano"; autojoin = "Yes"; },
   { name = "#terra_chat"; chatnet = "hispano"; autojoin = "Yes"; },
-
+  { name = "#mirage-team"; chatnet = "recycled"; autojoin = "Yes"; },
+  { name = "#anime-heart"; chatnet = "recycled"; autojoin = "Yes"; },
+  { name = "#seedteam"; chatnet = "otaku"; autojoin = "Yes"; },
+  { name = "#mononoke-bt"; chatnet = "otaku"; autojoin = "Yes"; },
 );
 
 ## ┬─┐┬  o┬─┐┐─┐┬─┐┐─┐

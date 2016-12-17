@@ -17,8 +17,8 @@ servers = (
   {
     address = "irc.epiknet.net";
     chatnet = "epiknet";
-    port = "7002";
-    use_ssl = "yes";
+    port = "6667";
+    use_ssl = "no";
     autoconnect = "no";
   },
   {

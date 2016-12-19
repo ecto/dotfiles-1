@@ -130,7 +130,7 @@ abstracts = {
   ################################## ACTIONS (/ME STUFF)
 
   # used internally by this theme
-  action_core = " %n*%n $*";
+  action_core = ">$*";
 
   # generic one that's used by most actions
   action = "{action_core $*} ";

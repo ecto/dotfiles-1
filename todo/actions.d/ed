@@ -1,22 +1,26 @@
 #!/usr/bin/env bash
 
+# Original work by FND
+# https://github.com/fnd/todo.txt-cli/blob/extensions/edit
+
+# Modified by f6k (20/12/16)
+
 action=$1
 shift
 
-function usage() {
-	echo "  $(basename $0) [item]"
-	echo "    Edit item(s) using text editor."
-	echo ""
-	exit
+[ "$action" = "usage" ] && {
+    echo "    $(basename $0) [ITEM]"
+    echo "      Open vi text editor at ITEM line. If no ITEM is provided, it will simply"
+    echo "      open the todo.txt file."
+    echo ""
+    exit
 }
 
-[ "$action" = "usage" ] && usage
-
-cmd=${EDITOR:-vi}
+COMMAND=${EDITOR:-vi}
 if [[ "$1" =~ ^[0-9]+$ ]]; then
-	cmd="$cmd +$1"
+	COMMAND="$COMMAND +$1"
 else
-  cmd="$cmd"
+  COMMAND="$COMMAND"
 fi
 
-$cmd "$TODO_FILE"
+$COMMAND "$TODO_FILE"

@@ -27,14 +27,14 @@ servers = (
     port = "6667";
     user_ssl = "no";
     autoconnect = "no";
-  }
+  },
   {
     address = "irc.otaku-irc.fr";
     chatnet = "otaku";
     port = "6667";
     user_ssl = "no";
     autoconnect = "no";
-  }
+  },
   {
     address = "irc.recycled-irc.net";
     chatnet = "recycled";
@@ -88,7 +88,7 @@ channels = (
   { name = "#mirage-team"; chatnet = "recycled"; autojoin = "Yes"; },
   { name = "#anime-heart"; chatnet = "recycled"; autojoin = "Yes"; },
   { name = "#seedteam"; chatnet = "otaku"; autojoin = "Yes"; },
-  { name = "#mononoke-bt"; chatnet = "otaku"; autojoin = "Yes"; },
+  { name = "#mononoke-bt"; chatnet = "otaku"; autojoin = "Yes"; }
 );
 
 ## ┬─┐┬  o┬─┐┐─┐┬─┐┐─┐
@@ -329,7 +329,7 @@ settings = {
     autocreate_query_level = "DCCMSGS";
     windows_auto_renumber = "yes";
     emphasis = "yes";
-    timestamps = "yes";
+    timestamps = "no";
     autolog_path = "~/x/Logs/$tag_$winref.log";
     hilight_act_color = "%8";
     activity_msg_level = "";

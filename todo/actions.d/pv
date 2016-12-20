@@ -1,44 +1,43 @@
 #!/usr/bin/env bash
 # 2009-2011 Paul Mansfield
 # License: GPL, http://www.gnu.org/copyleft/gpl.html
+# Original work:
+# https://github.com/the1ts/todo.txt-plugins/blob/master/actions/projectview/projectview
+
+# Modified by f6k (20/12/16)
+# Changes: removed `simplepv' trick; enhanced list presentation.
 
 # Stop Verbose lines, thanks to Mark Harrison
 TODOTXT_VERBOSE=0
 # Allow control of wrapping if using as simplepv action
 NOWRAP=0
 
-# Check how we are being run
-HOWRUN=$(basename $0)
-
 # move arguments one to left, therefore eating action name
 action=$1
 shift
 
-# If being run as simplepv then turn off all colours and
-# wrap at 40 characters
-# Useful for display outside of terminal
-if [ $HOWRUN = "simplepv" ] ; then
-    TODOTXT_PLAIN=1
-    PRI_X=$NONE
-    PRI_A=$NONE
-    PRI_B=$NONE
-    PRI_C=$NONE
-    DEFAULT=$NONE
-    COLOR_DONE=$NONE
-    # Check if we want to wrap text or not
-    if [ "$1" = "--nowrap" ]; then
-        NOWRAP=1
-        shift
-    fi
-    # If we have fmt then use it to wrap long lines
-    $(file /usr/bin/fmt > /dev/null 2>&1) 
-    FMT=$?
-    # Set final filter
-    if [ "$NOWRAP" -eq 1 ] ; then
-        TODOTXT_FINAL_FILTER="$TODOTXT_FINAL_FILTER "
-    elif [ $FMT -eq 0 ] ; then
-        TODOTXT_FINAL_FILTER="$TODOTXT_FINAL_FILTER | fmt -t -w 40"
-    fi
+# We don't need no colors
+TODOTXT_PLAIN=1
+PRI_X=$NONE
+PRI_A=$NONE
+PRI_B=$NONE
+PRI_C=$NONE
+DEFAULT=$NONE
+COLOR_DONE=$NONE
+
+# Check if we want to wrap text or not
+if [ "$1" = "--nowrap" ]; then
+    NOWRAP=1
+    shift
+fi
+# If we have fmt then use it to wrap long lines
+$(file /usr/bin/fmt > /dev/null 2>&1) 
+FMT=$?
+# Set final filter
+if [ "$NOWRAP" -eq 1 ] ; then
+    TODOTXT_FINAL_FILTER="$TODOTXT_FINAL_FILTER "
+elif [ $FMT -eq 0 ] ; then
+    TODOTXT_FINAL_FILTER="$TODOTXT_FINAL_FILTER | fmt -t -w 40"
 fi
 
 # Stop filter now and run in a controlled manner after the _list function is run
@@ -52,17 +51,19 @@ TODOTXT_DISABLE_FILTER=1
     exit
 }
 
-# Show projects in alphabetical order and todo items in priority order
 echo "."
 
 # Find all projects and sort
-PROJECTS=$(grep -o '[^ ]*+[^ ]\+' "$TODO_FILE" | grep '^+' | sort -u | sed 's/^+//g' )
+PROJECTS=$(grep -o '[^ ]*+[^ ]\+' "$TODO_FILE" | grep '^+' | \
+                                                 sort -u | sed 's/^+//g' )
 
 # For each project show header and the list of todo items
 for project in $PROJECTS ; do 
     # Use core _list function, does numbering and colouring for us
-    PROJECT_LIST=$(_list "$TODO_FILE" "+$project\b" "$@" | sed 's/^/│   ├── /;$s/├/└/' )
+    PROJECT_LIST=$(_list "$TODO_FILE" "+$project\b" "$@" | \
+                                             sed 's/^/│   ├── /;$s/├/└/' )
     if [[ -n "${PROJECT_LIST}" ]]; then
+        # All projects names uppercase
         conv='y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'
         echo  "├── $project" |sed -e "$conv"
         echo  "${PROJECT_LIST}" | eval $TODOTXT_FINAL_FILTER 
@@ -70,9 +71,11 @@ for project in $PROJECTS ; do
 done
 
 # Show todo items not associated to a project
-PROJECT_LIST=$(_list "$TODO_FILE" "$@" | grep -v "+[[:alnum:]]*" | sed 's/^/│   ├── /;  $s/├/└/' )
+PROJECT_LIST=$(_list "$TODO_FILE" "$@" | grep -v "+[[:alnum:]]*" | \
+                                           sed 's/^/│   ├── /;  $s/├/└/' )
 if [[ -n "${PROJECT_LIST}" ]]; then
     echo "├── VOID"
     echo "${PROJECT_LIST}" | eval $TODOTXT_FINAL_FILTER
 fi
+
 echo "."

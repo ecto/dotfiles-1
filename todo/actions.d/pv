@@ -5,17 +5,10 @@
 # https://github.com/the1ts/todo.txt-plugins/blob/master/actions/projectview/projectview
 
 # Modified by f6k (20/12/16)
-# Changes: removed `simplepv' trick; enhanced list presentation.
+# Changes: removed `simplepv' tricks; enhanced list presentation (tree).
 
 # Stop Verbose lines, thanks to Mark Harrison
 TODOTXT_VERBOSE=0
-# Allow control of wrapping if using as simplepv action
-NOWRAP=0
-
-# move arguments one to left, therefore eating action name
-action=$1
-shift
-
 # We don't need no colors
 TODOTXT_PLAIN=1
 PRI_X=$NONE
@@ -25,23 +18,9 @@ PRI_C=$NONE
 DEFAULT=$NONE
 COLOR_DONE=$NONE
 
-# Check if we want to wrap text or not
-if [ "$1" = "--nowrap" ]; then
-    NOWRAP=1
-    shift
-fi
-# If we have fmt then use it to wrap long lines
-$(file /usr/bin/fmt > /dev/null 2>&1) 
-FMT=$?
-# Set final filter
-if [ "$NOWRAP" -eq 1 ] ; then
-    TODOTXT_FINAL_FILTER="$TODOTXT_FINAL_FILTER "
-elif [ $FMT -eq 0 ] ; then
-    TODOTXT_FINAL_FILTER="$TODOTXT_FINAL_FILTER | fmt -t -w 40"
-fi
-
-# Stop filter now and run in a controlled manner after the _list function is run
-TODOTXT_DISABLE_FILTER=1 
+# move arguments one to left, therefore eating action name
+action=$1
+shift
 
 [ "$action" = "usage" ] && {
     echo "    $(basename $0) [TERM...]"
@@ -63,10 +42,10 @@ for project in $PROJECTS ; do
     PROJECT_LIST=$(_list "$TODO_FILE" "+$project\b" "$@" | \
                                              sed 's/^/│   ├── /;$s/├/└/' )
     if [[ -n "${PROJECT_LIST}" ]]; then
-        # All projects names uppercase
+        # All projects names are uppercase
         conv='y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'
         echo  "├── $project" |sed -e "$conv"
-        echo  "${PROJECT_LIST}" | eval $TODOTXT_FINAL_FILTER 
+        echo  "${PROJECT_LIST}"
     fi
 done
 
@@ -75,7 +54,7 @@ PROJECT_LIST=$(_list "$TODO_FILE" "$@" | grep -v "+[[:alnum:]]*" | \
                                            sed 's/^/│   ├── /;  $s/├/└/' )
 if [[ -n "${PROJECT_LIST}" ]]; then
     echo "├── VOID"
-    echo "${PROJECT_LIST}" | eval $TODOTXT_FINAL_FILTER
+    echo "${PROJECT_LIST}"
 fi
 
 echo "."

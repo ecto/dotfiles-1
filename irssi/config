@@ -317,7 +317,7 @@ settings = {
     theme = "vt100";
     show_names_on_join = "no";
     print_active_channel = "yes";
-    use_status_window = "no";
+    use_status_window = "yes";
     autolog = "no";
     hilight_color = "%8";
     term_charset = "utf-8";
@@ -384,6 +384,7 @@ settings = {
     xmpp_status_window = "no";
     xmpp_roster_show_offline = "no";
   };
+  "fe-common/irc" = { show_away_once = "yes"; };
 };
 
 ## ┬ ┬o┬  o┌─┐┬ ┬┌┐┐┐─┐

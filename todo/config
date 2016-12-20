@@ -13,6 +13,15 @@ export REPORT_FILE="$TODO_DIR/report.txt"
 # actions directory location
 export TODO_ACTIONS_DIR="$HOME/.todo/actions.d"
 
+# no colors, no fancy
+TODOTXT_PLAIN=1
+PRI_X=$NONE
+PRI_A=$NONE
+PRI_B=$NONE
+PRI_C=$NONE
+DEFAULT=$NONE
+COLOR_DONE=$NONE
+
 ## customize list output
 #
 # TODOTXT_SORT_COMMAND will filter after line numbers are

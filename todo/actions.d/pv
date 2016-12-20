@@ -9,14 +9,6 @@
 
 # Stop Verbose lines, thanks to Mark Harrison
 TODOTXT_VERBOSE=0
-# We don't need no colors
-TODOTXT_PLAIN=1
-PRI_X=$NONE
-PRI_A=$NONE
-PRI_B=$NONE
-PRI_C=$NONE
-DEFAULT=$NONE
-COLOR_DONE=$NONE
 
 # move arguments one to left, therefore eating action name
 action=$1

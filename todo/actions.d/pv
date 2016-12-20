@@ -32,7 +32,8 @@ PROJECTS=$(grep -o '[^ ]*+[^ ]\+' "$TODO_FILE" | grep '^+' | \
 for project in $PROJECTS ; do 
     # Use core _list function, does numbering and colouring for us
     PROJECT_LIST=$(_list "$TODO_FILE" "+$project\b" "$@" | \
-                                             sed 's/^/│   ├── /;$s/├/└/' )
+                                             sed 's/^/│   ├── /;$s/├/└/' | \
+                                             sed 's/+//g' )
     if [[ -n "${PROJECT_LIST}" ]]; then
         # All projects names are uppercase
         conv='y/abcdeéèfghijklmnoôpqrstuùvwxyz/ABCDEEEFGHIJKLMNOOPQRSTUUVWXYZ/'

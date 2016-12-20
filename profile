@@ -56,6 +56,8 @@ alias df='df --human-readable'
 alias mkdir='mkdir -v'
 alias s='cd ..'
 alias chmod='chmod -v'
+alias t="todo.sh -p"
+complete -F _todo t
 
 # OTHERS
 alias reload='source ~/.profile'

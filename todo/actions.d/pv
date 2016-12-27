@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+# 2009-2011 Paul Mansfield
+# License: GPL, http://www.gnu.org/copyleft/gpl.html
+# Original work:
+# https://github.com/the1ts/todo.txt-plugins/blob/master/actions/projectview/projectview
+
+# Modified by f6k (20/12/16)
+# Changes: removed `simplepv' tricks; enhanced list presentation (tree).
+
+# Stop Verbose lines, thanks to Mark Harrison
+TODOTXT_VERBOSE=0
+
+# move arguments one to left, therefore eating action name
+action=$1
+shift
+
+[ "$action" = "usage" ] && {
+    echo "    $(basename $0) [TERM...]"
+    echo "      Show todo items containing TERM, grouped by project, and displayed in"
+    echo "      priority order. If no TERM provided, displays entire todo.txt."
+    echo ""
+    exit
+}
+
+# Define a projectview function so we can `less' it later if too large
+projectview() {
+  echo "."
+
+  # Find all projects and sort
+  PROJECTS=$(grep -o '[^ ]*+[^ ]\+' "$TODO_FILE" | grep '^+' | \
+                                                 sort -u | sed 's/^+//g' )
+
+  # For each project show header and the list of todo items
+  for project in $PROJECTS ; do 
+    # Use core _list function, does numbering and colouring for us
+    PROJECT_LIST=$(_list "$TODO_FILE" "+$project\b" "$@" | \
+                                             sed 's/^/│   ├── /;$s/├/└/' | \
+                                             sed 's/+//g' )
+    if [[ -n "${PROJECT_LIST}" ]]; then
+      # All projects names are uppercase
+      conv='y/abcdeéèfghijklmnoôpqrstuùvwxyz/ABCDEEEFGHIJKLMNOOPQRSTUUVWXYZ/'
+      echo  "├── $project" |sed -e "$conv"
+      echo  "${PROJECT_LIST}"
+    fi
+  done
+
+  # Show todo items not associated to a project
+  PROJECT_LIST=$(_list "$TODO_FILE" "$@" | grep -v "+[[:alnum:]]*" | \
+                                           sed 's/^/│   ├── /;  $s/├/└/' )
+  if [[ -n "${PROJECT_LIST}" ]]; then
+    echo "├── VOID"
+    echo "${PROJECT_LIST}"
+  fi
+
+  echo "."
+}
+
+projectview | less -z-2 -XFM

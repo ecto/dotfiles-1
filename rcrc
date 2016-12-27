@@ -3,4 +3,4 @@
 
 COPY_ALWAYS="*"
 DOTFILES_DIRS="/home/f6k/g/dotfiles"
-EXCLUDES="README.md"
+EXCLUDES="avatar.png conkyrc dillo dosbox emacs.d gtkrc-2.0 larswmrc radio ratpoisonrc README.md snownews wallpaper.png Xdefaults xinitrc zile"

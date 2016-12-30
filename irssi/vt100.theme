@@ -88,8 +88,8 @@ abstracts = {
   ################## MESSAGES
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
-  msgnick = "$0$1-%n> %n";
-  msghi = "$0$1-%n> %n";
+  msgnick = ".$0$1-%n> %n";
+  msghi = ".$0$1-%n> %n";
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1-}";

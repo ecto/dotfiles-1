@@ -161,6 +161,8 @@ aliases = {
   fpart = "quote remove $C";
   hideadd = "eval set activity_hide_targets $activity_hide_targets $C";
   hideset = "set activity_hide_targets $-";
+  wd = "window down";
+  wu = "window down";
 };
 
 ## ┐─┐┌┐┐┬─┐┌┐┐┬ ┐┐─┐┬─┐┬─┐┬─┐
@@ -292,7 +294,7 @@ statusbar = {
     enable = { disabled = "yes"; };
     remove = { disabled = "yes"; };
     disable = { disabled = "yes"; };
-    line = { items = { barend = { }; }; };
+    line = { items = { barend = { }; }; type = "window"; };
   };
 };
 
@@ -343,7 +345,7 @@ settings = {
     activity_hilight_level = "HILIGHT MSGS DCCMSGS";
     bell_beeps = "no";
     beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
-    activity_hide_targets = "#dud-t #freenode #25-35ans #Rencontres #Dialogues #ubuntu ##slackware #emacs #NetHack #laquadrature ##linux ##security ##windows #test #nanowrimo_france #ubuntu-fr #ubuntu-fr-offtopic #debian-fr #debian #raspberrypi #mexico #Colombia #terra_chat #FlashNews #mononoke-bt #seedteam #anime-heart #mirage-team";
+    activity_hide_targets = "#dud-t #freenode #25-35ans #Rencontres #Dialogues #ubuntu ##slackware #emacs #NetHack #laquadrature ##linux ##security ##windows #test #nanowrimo_france #ubuntu-fr #ubuntu-fr-offtopic #debian-fr #debian #raspberrypi #mexico #Colombia #terra_chat #FlashNews #mononoke-bt #seedteam #anime-heart #mirage-team #quebec #Mp3Passion #100%BigTits";
     hide_text_style = "yes";
   };
   "irc/core" = {
@@ -358,6 +360,7 @@ settings = {
     scroll_page_count = "/1";
     scroll = "yes";
     actlist_sort = "recent";
+    autostick_split_windows = "no";
   };
   "perl/core/scripts" = {
     trackbar_string = "- ";

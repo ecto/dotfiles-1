@@ -471,7 +471,7 @@ mode,"spaces",rtn	% % No tabs %Zspaces%
 }
 
 {Windows
-\i   Help Screen    \|turn off with ^J     prev. screen ^[,    next screen ^[.     \i
+\i   Help Screen    \|turn off with ^J     prev. screen ^[,    next screen ^[;     \i
 \i \i\|^KO Split the window in half           \|^KE Load file into window             \|\i \i
 \i \i\|^KG Make current window bigger         \|^KT Make current window smaller       \|\i \i
 \i \i\|^KN Go to the window below             \|^KP Go to the window above            \|\i \i
@@ -479,7 +479,7 @@ mode,"spaces",rtn	% % No tabs %Zspaces%
 }
 
 {Advanced
-\i   Help Screen    \|turn off with ^J     prev. screen ^[,    next screen ^[.     \i
+\i   Help Screen    \|turn off with ^J     prev. screen ^[,    next screen ^[;     \i
 \i \i\|\bMACROS\b      \|\bMISC\b            \|\bSCROLL\b    \|\bSHELL\b       \|\bGOTO\b       \|\bI-SEARCH\b        \|\i \i
 \i \i\|^[( Record  \|^Q? status      \|^Q. Right \|^K' Window  \|^QB to ^KB \|^[R Backwards   \|\i \i
 \i \i\|^[) Stop    \|^QQ repeat      \|^Q, Left  \|^[! Command \|^QK to ^KK \|^[S Forwards    \|\i \i
@@ -489,7 +489,7 @@ mode,"spaces",rtn	% % No tabs %Zspaces%
 }
 
 {Programs
-\i   Help Screen    \|turn off with ^J     prev. screen ^[,    next screen ^[.     \i
+\i   Help Screen    \|turn off with ^J     prev. screen ^[,    next screen ^[;     \i
 \i \i\|\bGOTO\b                \|\bINDENT\b    \|\bCOMPILING\b                     \|                 \|\i \i
 \i \i\|^Q[ Matching ( [ {  \|^K. more  \|^[C Compile and parse errors  \|                 \|\i \i
 \i \i\|^QP Previous place  \|^K, less  \|^[E Parse errors              \|                 \|\i \i
@@ -498,7 +498,7 @@ mode,"spaces",rtn	% % No tabs %Zspaces%
 }
 
 {Search
-\i   Help Screen    \|turn off with ^J     prev. screen ^[,    next screen ^[.     \i
+\i   Help Screen    \|turn off with ^J     prev. screen ^[,    next screen ^[;     \i
 \i \iSpecial search sequences:                                                    \|\i \i
 \i \i    \\^  \\$  matches beg./end of line      \\?     match any single char       \|\i \i
 \i \i    \\<  \\>  matches beg./end of word      \\*     match 0 or more chars       \|\i \i
@@ -512,7 +512,7 @@ mode,"spaces",rtn	% % No tabs %Zspaces%
 }
 
 {SearchOptions
-\i   Help Screen    \|turn off with ^KH    prev. screen ^[,    next screen ^[.     \i
+\i   Help Screen    \|turn off with ^KH    prev. screen ^[,    next screen ^[;     \i
 \i \iSearch options:                                                              \|\i \i
 \i \i   r Replace                                                                 \|\i \i
 \i \i   k Restrict search to highlighted block, which can be rectangular          \|\i \i
@@ -526,7 +526,7 @@ mode,"spaces",rtn	% % No tabs %Zspaces%
 }
 
 {Math
-\i   Help Screen    \|turn off with ^J     prev. screen ^[,    next screen ^[.     \i
+\i   Help Screen    \|turn off with ^J     prev. screen ^[,    next screen ^[;     \i
 \i \i \bCOMMANDS\b (hit ^Q M for math)   \bFUNCTIONS\b                                    \|\i \i
 \i \i     hex hex display mode       sin cos tab asin acos atan                   \|\i \i
 \i \i     dec decimal mode           sinh cosh tanh asinh acosh atanh             \|\i \i
@@ -541,7 +541,7 @@ mode,"spaces",rtn	% % No tabs %Zspaces%
 }
 
 {Names
-\i   Help Screen    \|turn off with ^J     prev. screen ^[,    next screen ^[.     \i
+\i   Help Screen    \|turn off with ^J     prev. screen ^[,    next screen ^[;     \i
 \i \i Hit TAB at file name prompts to generate menu of file names                 \|\i \i
 \i \i Or use up/down keys to access history of previously entered names           \|\i \i
 \i \i Special file names:                                                         \|\i \i
@@ -553,7 +553,7 @@ mode,"spaces",rtn	% % No tabs %Zspaces%
 }
 
 {Joe
-\i   Help Screen    \|turn off with ^J     prev. screen ^[,    next screen ^[.     \i
+\i   Help Screen    \|turn off with ^J     prev. screen ^[,    next screen ^[;     \i
 \i \i Send bug reports to: http://sourceforge.net/projects/joe-editor \|\i \i
 \i \i \|\i \i
 \i \i  default joerc file is here /etc/joe/joerc \|\i \i

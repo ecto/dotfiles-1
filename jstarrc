@@ -459,7 +459,7 @@ mode,"spaces",rtn	% % No tabs %Zspaces%
  Use \f to turn on/off flash
 
 {Basic
-\i   Help Screen    \|turn off with ^J     more help with ESC . (^[.)              \i
+\i   Help Screen    \|turn off with ^J     more help with ESC ; (^[;)              \i
 \i \i\|\bCURSOR\b           \|\bGO TO\b            \|\bBLOCK\b     \|\bDELETE\b    \|\bMISC\b         \|\bEXIT\b      \|\i \i
 \i \i\|^S left ^D right \|^R  prev. screen \|^KB begin \|^G  char  \|^B  reformat \|^KX save  \|\i \i
 \i \i\|^E up   ^X down  \|^C  next screen  \|^KK end   \|^Y  line  \|^V  overtype \|^KQ abort \|\i \i
@@ -645,7 +645,7 @@ help		^J
 nmark		^K H
 nmark		^K ^H
 nmark		^K h
-hnext		^[ .
+hnext		^[ ;
 hprev		^[ ,
 math		^Q M
 math		^Q ^M

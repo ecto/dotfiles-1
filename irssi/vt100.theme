@@ -266,8 +266,11 @@ formats = {
   "fe-common/core" = {
     timestamp = "{timestamp $Z }";
     own_msg_private_query = "{ownprivmsgnick {ownprivnick $2}}$1";
-    join = "JOIN $0 ($1)";
-    part = "PART $0 $3";
-    quit = "QUIT $0 ($2)";
+    join = "JOIN $0";
+    # ($1)";
+    part = "PART $0";
+    # $3";
+    quit = "QUIT $0";
+    # ($2)";
   };
 };

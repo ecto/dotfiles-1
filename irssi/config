@@ -15,7 +15,7 @@ servers = (
     autoconnect = "no";
   },
   {
-    address = "irc.epiknet.net";
+    address = "irc.epiknet.org";
     chatnet = "epiknet";
     port = "6667";
     use_ssl = "no";
@@ -66,22 +66,12 @@ chatnets = {
 channels = (
   { name = "#dud-t"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "##slackware"; chatnet = "freenode"; autojoin = "Yes"; },
-  { name = "#emacs"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#NetHack"; chatnet = "freenode"; autojoin = "Yes"; },
-  { name = "#raspberrypi"; chatnet = "freenode"; autojoin = "Yes"; },
-  { name = "#freenode"; chatnet = "freenode"; autojoin = "Yes"; },
-  { name = "#laquadrature"; chatnet = "freenode"; autojoin = "Yes"; },
-  { name = "##linux"; chatnet = "freenode"; autojoin = "Yes"; },
-  { name = "##security"; chatnet = "freenode"; autojoin = "Yes"; },
-  { name = "##windows"; chatnet = "freenode"; autojoin = "Yes"; },
   { 
     name = "#nanowrimo_france";
     chatnet = "epiknet";
     autojoin = "Yes";
   },
-  { name = "#Dialogues"; chatnet = "epiknet"; autojoin = "Yes"; },
-  { name = "#Rencontres"; chatnet = "epiknet"; autojoin = "Yes"; },
-  { name = "#25-35ans"; chatnet = "epiknet"; autojoin = "Yes"; },
   { name = "#Colombia"; chatnet = "hispano"; autojoin = "Yes"; },
   { name = "#mexico"; chatnet = "hispano"; autojoin = "Yes"; },
   { name = "#terra_chat"; chatnet = "hispano"; autojoin = "Yes"; },
@@ -366,7 +356,7 @@ settings = {
     trackbar_string = "- ";
     trackbar_style = "%n";
     away_reason = "AFK [messages are logged]";
-    autoaway = "1200";
+    autoaway = "600";
     autounaway_level = "PUBLIC MSGS ACTIONS";
     wlstat_placement = "top";
     autoaway_timeout = "1200";
@@ -402,6 +392,6 @@ hilights = ( { text = "f6k"; nick = "yes"; word = "yes"; } );
 ## ┘ ││──┘└─┘┴─┘└─┘└─┘┘ │ └┘┴─┘┘─┘└─┘──┘
 ########################## MISCELLANEOUS
 
-ignores = ( );
+ignores = ( { level = "CRAP TOPICS CLIENTNOTICES CLIENTCRAP"; } );
 keyboard = ( );
 logs = { };

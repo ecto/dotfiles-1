@@ -29,13 +29,13 @@ abstracts = {
   ############## GENERIC
 
   # text to insert at the beginning of each non-message line
-  line_start = "# ";
+  line_start = "── ";
 
   # timestamp styling, nothing by default
   timestamp = "$*";
 
   # any kind of text that needs hilighting, default is to bold
-  hilight = "%_$*%_";
+  hilight = "$*";
 
   # any kind of error message, default is bright red
   error = "$*";
@@ -59,7 +59,7 @@ abstracts = {
   reason = "{comment $*}";
 
   # mode change is printed ([+o nick])
-  mode = "{comment $*}";
+  mode = "$*";
 
   misc = "[$*]";
 
@@ -112,17 +112,17 @@ abstracts = {
   msgchannel = "%n:$*%n";
 
   # private message, $0 = nick, $1 = host
-  privmsg = "[%n$0($1-)%n] ";
+  privmsg = ".%n$0%n> ";
 
   # private message from you, $0 = "msg", $1 = target nick
-  ownprivmsg = "[$0%n(%n$1-%n)%n] ";
+  ownprivmsg = ".$0_$1> ";
 
   # own private message in query
-  ownprivmsgnick = "{msgnick  $*}";
+  ownprivmsgnick = "{msgnick $*}";
   ownprivnick = "$*";
 
   # private message in query
-  privmsgnick = "{msgnick  %n$*%n}";
+  privmsgnick = "{msgnick %n$*%n}";
 
   ## ┬─┐┌─┐┌┐┐o┌─┐┌┐┐┐─┐   ┌  ╷┌┌┐┬─┐  ┐─┐┌┐┐┬ ┐┬─┐┬─┐ ┐ 
   ## │─┤│   │ ││ ││││└─┐   │ ┌┘│││├─   └─┐ │ │ │├─ ├─  │ 
@@ -264,13 +264,14 @@ abstracts = {
 
 formats = {
   "fe-common/core" = {
+    line_start = "{line_start}";
+    line_start_irssi = "{line_start}";
     timestamp = "{timestamp $Z }";
     own_msg_private_query = "{ownprivmsgnick {ownprivnick $2}}$1";
-    join = "JOIN $0";
-    # ($1)";
-    part = "PART $0";
-    # $3";
-    quit = "QUIT $0";
-    # ($2)";
+    join = "$0 has entered";
+    part = "$0 has left";
+    quit = "$0 has quit";
+    your_nick_changed = "You've evolved in {nick $1}";
+    nick_changed = "{channick $0} has evolved in {channick_hilight $1}";
   };
 };

@@ -15,7 +15,7 @@ servers = (
     autoconnect = "no";
   },
   {
-    address = "irc.epiknet.org";
+    address = "irc.epiknet.net";
     chatnet = "epiknet";
     port = "6667";
     use_ssl = "no";
@@ -255,7 +255,7 @@ statusbar = {
       items = {
         lag = { priority = "-1"; };
         act = { priority = "-1"; };
-        away = { priority = "0"; };
+        away = { };
         window = { };
         window_empty = { };
         xmpp_composing = { };
@@ -320,7 +320,7 @@ settings = {
     reuse_unused_windows = "yes";
     autocreate_query_level = "DCCMSGS";
     windows_auto_renumber = "yes";
-    emphasis = "yes";
+    emphasis = "no";
     timestamps = "no";
     autolog_path = "~/x/Logs/$tag_$winref.log";
     hilight_act_color = "%8";
@@ -343,10 +343,11 @@ settings = {
     alternate_nick = "f6k_";
     ctcp_version_reply = "version 20050412";
     ctcp_userinfo_reply = "version 20050412";
+    skip_motd = "yes";
   };
   "fe-text" = {
     indent = "0";
-    colors = "yes";
+    colors = "no";
     scroll_page_count = "/1";
     scroll = "yes";
     actlist_sort = "recent";
@@ -356,7 +357,7 @@ settings = {
     trackbar_string = "- ";
     trackbar_style = "%n";
     away_reason = "AFK [messages are logged]";
-    autoaway = "600";
+    autoaway = "1200";
     autounaway_level = "PUBLIC MSGS ACTIONS";
     wlstat_placement = "top";
     autoaway_timeout = "1200";
@@ -392,6 +393,6 @@ hilights = ( { text = "f6k"; nick = "yes"; word = "yes"; } );
 ## ┘ ││──┘└─┘┴─┘└─┘└─┘┘ │ └┘┴─┘┘─┘└─┘──┘
 ########################## MISCELLANEOUS
 
-ignores = ( { level = "CRAP TOPICS CLIENTNOTICES CLIENTCRAP"; } );
+ignores = ( { level = "CRAP CLIENTNOTICES CLIENTCRAP"; } );
 keyboard = ( );
 logs = { };

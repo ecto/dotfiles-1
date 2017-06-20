@@ -1,0 +1,37 @@
+################################################################################
+## ~/.todo/config
+
+# todo.txt directory
+export TODO_DIR="$HOME/b"
+#export TODO_DIR=`dirname "$0"`
+
+# todo/done/report.txt locations
+export TODO_FILE="$HOME/t"
+export DONE_FILE="$TODO_DIR/done.txt"
+export REPORT_FILE="$TODO_DIR/report.txt"
+
+# actions directory location
+export TODO_ACTIONS_DIR="$HOME/.todo/actions.d"
+
+# no colors, no fancy
+TODOTXT_PLAIN=1
+PRI_X=$NONE
+PRI_A=$NONE
+PRI_B=$NONE
+PRI_C=$NONE
+DEFAULT=$NONE
+COLOR_DONE=$NONE
+
+## customize list output
+#
+# TODOTXT_SORT_COMMAND will filter after line numbers are
+# inserted, but before colorization, and before hiding of
+# priority, context, and project.
+#
+# export TODOTXT_SORT_COMMAND='env LC_COLLATE=C sort -f -k2'
+
+# TODOTXT_FINAL_FILTER will filter list output after colorization,
+# priority hiding, context hiding, and project hiding. That is,
+# just before the list output is displayed.
+#
+# export TODOTXT_FINAL_FILTER='cat'

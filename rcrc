@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 ################################################################################
 ## ~/.rcrc
 
 COPY_ALWAYS="*"
 DOTFILES_DIRS="/home/f6k/g/dotfiles"
 EXCLUDES="avatar.png conkyrc dillo dosbox emacs.d gtkrc-2.0 larswmrc radio ratpoisonrc README.md snownews wallpaper.png Xdefaults xinitrc zile"
+=======
+################################################################################
+## ~/.rcrc
+
+COPY_ALWAYS="*"
+DOTFILES_DIRS="/home/f6k/g/dotfiles"
+EXCLUDES="avatar.png conkyrc dillo dosbox emacs.d gtkrc-2.0 larswmrc radio ratpoisonrc README.md snownews wallpaper.png Xdefaults xinitrc zile issue motd"
+>>>>>>> 6cdeb8091c0d0434740935dcf53758526d1026d6
